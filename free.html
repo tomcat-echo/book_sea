@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>书海网</title>
+    <link rel="SHORTCUT ICON" href=image/title_img.ico />
+    <script src="active.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/free.css" >   
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1498489_dqmy6saca8.css">
+</head>
+<body >
+		    <script type="text/javascript">
+			 window.onload=function(){
+		    var content="";
+			 countDown();
+						          function addZero(i) {
+						              return i < 10 ? "0" + i: ""+ i ;
+						              //添零
+						          }
+						          function countDown() {
+						              var nowtime = new Date();//获取当前时间
+						              var endtime = new Date("2022/04/10,17:57:00");
+						              var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+						              //以秒为单位
+						              var d = parseInt(lefttime / (24*60*60))
+						              var h = parseInt(lefttime / (60 * 60) % 24);
+						              var m = parseInt(lefttime / 60 % 60);
+						              var s = parseInt(lefttime % 60);
+						              h = addZero(h);
+						              m = addZero(m);
+						              s = addZero(s);
+						                 document.getElementById("count").innerHTML="&nbsp;"+d+"&nbsp;&nbsp;&nbsp;"+h+"&nbsp;&nbsp;&nbsp;"+m+"&nbsp;&nbsp;"+s;
+						              if (lefttime <= 0) {
+						                  document.getElementById("count").innerHTM = "活动已结束";
+						                  return;
+						              }
+						              setTimeout(countDown, 1000);
+						              //1秒刷新一次
+						            }
+			 }
+			 
+						     
+ 
+ </script> 
+
+    <div class="wrap home">
+        <div id="header">
+	        	<div class="cf layer">
+	                <h1 class="logo fl" title="书海">
+	                    <a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/novel.html">书海小说网</a>
+	                </h1>
+	            
+	            <div class="search-wrap " >
+	                <form  id="formUrl" action="/search" method="get" target="_blank">
+	                    <input class="search-box fl" id="s-box" name="kw" type="text" placeholder="傲气如我" autocomplete="off" value="">
+	                    <input class="submit-input" type="submit" id="searchSubmit" data-eid="">
+	                    <label id="search-btn" class="search-btn fl" for="searchSubmit">
+								<i class="iconfont icon-linedesign-12 c42"></i>            
+	                    </label>
+	                </form>
+	            </div>
+	            <div class="user-wrap cf">
+	            	<ul class="fr">
+		            	<li>
+		            		<a class="head-shelf" href="javascript:">
+		            			<i class="iconfont icon-ziyuan22 c42"></i> 我的书架
+		            		</a>
+		            	</li>
+		            	<li >
+		            		<a class="head-msg " href="javascript:" >
+		            			<i class="iconfont icon-xinfeng1 c42"></i> 消息中心
+		            		</a>
+		            	</li>
+		            	<li >
+		            		<div class="avatar fr " id="j-userWrap">
+			            	<a class="link fl" href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/login.html" id="j-avatar">
+								<i class="iconfont icon-yonghu"></i> 登录           
+			            	</a>
+		            		</div>
+	
+		            	</li>
+
+		            </ul>
+	            
+		            
+	            </div>
+	</div>
+	</div>
+	            <div class="top-nav-wrap c42">
+	                <div class="layer cf">
+	                    <div class="left-nav fl">
+							<ul >
+								<li onMouseOver="show(this)" onMouseOut="hide(this)" class="type " id="j-navType">
+									<a href="#" class="pull">
+										<i class="iconfont icon-caidan"></i>
+										全部分类
+									</a>
+										<ul class="sort-list" style="display: none;">
+											<li><a href=""><i class="iconfont"></i>现代言情</a></li>
+	     									<li><a href=""><i class="iconfont"></i>古代言情</a></li>
+											<li><a href=""><i class="iconfont"></i>浪漫青春</a></li>
+	     									<li><a href=""><i class="iconfont"></i>玄幻言情</a></li>
+	     									<li><a href=""><i class="iconfont"></i>仙侠奇缘</a></li>
+	     									<li><a href=""><i class="iconfont"></i>悬疑</a></li>
+											<li><a href=""><i class="iconfont"></i>科幻空间</a></li>
+	     									<li><a href=""><i class="iconfont"></i>游戏竞技</a></li>
+	     							        <li><a href=""><i class="iconfont"></i>短篇小说</a></li>
+	     									<li><a href=""><i class="iconfont"></i>轻小说</a></li>
+										</ul>
+								</li>		
+								<li><a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/rank.html">排行榜</a></li>
+								<li style=" border-bottom: 3px solid #fff;"><a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/free.html">免费</a></li>
+								<li><a href="#">完本</a></li>
+								<li><a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/pre.html">古言</a></li>
+								<li><a href="#">现言</a></li>
+								<li><a href="#">玄幻仙侠</a></li>
+								<li><a href="#">悬疑科幻</a></li>
+								<li><a href="#">青春游戏</a></li>
+								<li><a href="#">风尚阁</a></li>
+								<li><a href="#">版权专区</a></li>
+							</ul>
+	                    </div>
+	                    <div class="right-nav ">
+	                         <ul >
+	                         	<li class="fl">
+	                         		<a href="#">
+	                         			<i class="iconfont icon-qian"></i> 充值
+	                         		</a>
+	                         	</li>
+	                         	<li>
+	                         		<a href="#">
+	                         			<i class="iconfont icon-gangbi"></i>作家专区
+	                         		</a>
+	                         	</li>
+	                         </ul>
+	                    </div>
+	                </div>
+	         </div>
+	    
+	   
+	    
+        <div id="index-wrap">
+			<div class="free-container box-center">
+        <div class="free-type-tab mb20 cf">
+                <a class="lang act" href="/free">限时免费</a>
+        </div>
+        <div id="free-channel-wrap">
+            <div id="j-freeBookWrap">
+                
+                <div class="count-down mb20" id="time-box" data-endtime="19696">
+                    <h3>VIP章节免费读</h3>
+                    <h4>免费阅读全部收费章节</h4>
+                    <div class="digital" id="countdown">
+                    	<span class="count" id="count">
+            			</span>
+                       
+                    </div>
+                    <div class="unit">
+                        <span class="day">天</span>
+                        <span>小时</span>
+                        <span>分钟</span>
+                        <span>秒</span>
+                    </div>
+                </div>
+                <div class="limit-free-list cf">
+                    <div class="limit-book-list fl" data-l1="5">
+                        
+                        <div id="limit-list" class="inner-wrap">
+                            <div class="book-img-text">
+                                <ul>
+                                    
+                                    <li data-rid="1">
+                                        <div class="book-img-box">
+                                            <a href="/book/18247008208716104" data-eid="qd_E04" data-bid="18247008208716104" target="_blank"><img src="//bookcover.yuewen.com/qdbimg/349573/c_18247008208716104/150"></a>
+                                        </div>
+                                        <div class="book-mid-info">
+                                            <h4><a href="/book/18247008208716104" target="_blank" data-eid="qd_E05" data-bid="18247008208716104">一不小心全家变大佬</a></h4>
+                                            <p class="author">
+                                                <img src="//qidian.gtimg.com/hongxiu/images/ico/account.1e031.png"><a class="default name" data-eid="qd_E06">糖痴豆</a><em>|</em><a data-eid="qd_E07" href="/all?catId=30020" target="_blank">现代言情</a><em>|</em><span>连载中</span>
+                                            </p>
+                                            <p class="intro">
+                                                开始的时候：
+顾爸爸：在这条街上整一家店面呗。
+顾妈妈：在这个城市弄套房子就好了(●°u°●)​&nbsp;
+顾外婆：给我养几头猪就成。
+顾奶奶：把我借出去的几百块钱还回来就行。
+后来：
+顾爸爸有了一条商业街，顾妈妈每个月都要拎着一串钥匙去收租，顾外婆成了仁厚村有机农场的总监，顾奶奶更是看着存折上的零数不过来。
+顾盼挠着脑袋心虚，一不小心给整大了啊！╮（╯＿╰）╭
+                                            </p>
+                                            <p class="update"><a href="/chapter/18247008208716104/50209227876580341" data-eid="qd_E08" data-bid="18247008208716104" data-cid="//www.hongxiu.com/book/18247008208716104/50209227876580341" target="_blank">最新更新  119、明枪暗箭</a><em>·</em><span>2020-12-04 22:56:14</span>
+                                            </p>
+                                        </div>
+                                        <div class="book-right-info">
+                                            <p class="btn">
+                                                <a class="red-btn" href="/book/18247008208716104" target="_blank" data-eid="qd_E02" data-bid="18247008208716104">免费阅读</a>
+                                                
+                                                <a class="border-btn add-book" href="javascript:" data-eid="qd_E03" data-bookid="18247008208716104" data-bid="18247008208716104">加入书架</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    
+                                    <li data-rid="2">
+                                        <div class="book-img-box">
+                                            <a href="/book/17033830205432804" data-eid="qd_E04" data-bid="17033830205432804" target="_blank"><img src="//bookcover.yuewen.com/qdbimg/349573/c_17033830205432804/150"></a>
+                                        </div>
+                                        <div class="book-mid-info">
+                                            <h4><a href="/book/17033830205432804" target="_blank" data-eid="qd_E05" data-bid="17033830205432804">穿书之我成了景先生的宿主</a></h4>
+                                            <p class="author">
+                                                <img src="//qidian.gtimg.com/hongxiu/images/ico/account.1e031.png"><a class="default name" data-eid="qd_E06">顾七西</a><em>|</em><a data-eid="qd_E07" href="/all?catId=30020" target="_blank">现代言情</a><em>|</em><span>连载中</span>
+                                            </p>
+                                            <p class="intro">
+                                                【景云晔篇】
+    他在她的意识世界里活了五年，在她笔下的世界活了五辈子。
+    从苦命男二，到狠心老爹，到反派boss，到狗血的短命男三，虐自己！虐女主、辨白莲，直到第五世，他才终于拿到了男主的身份。
+   见到她时，他恨得牙痒痒，“简安七，你脑子到底是什么构造的？怎么脑洞能这么大？”
+【简安七篇】
+　一场车祸，她失去了父母，姐姐，也从此变成大门不出二门不迈的宅女。
+　可她怎么也没想到，写个书还能出个bug啊……
+　“那个，大佬，有事好商量，能动口咱们尽量别动手……”
+     只见他缓缓一笑，捏住她的脸蛋儿，磨牙警告：“简安七，你以后要是再敢写虐文，试试看。”
+    简安七看着他为她套上的戒指，笑得张扬，“不写不写，甜着呢～”
+                                            </p>
+                                            <p class="update"><a href="/chapter/17033830205432804/50132230538236464" data-eid="qd_E08" data-bid="17033830205432804" data-cid="//www.hongxiu.com/book/17033830205432804/50132230538236464" target="_blank">最新更新  043以前你防我进来跟防贼一样呢</a><em>·</em><span>2020-12-04 23:46:43</span>
+                                            </p>
+                                        </div>
+                                        <div class="book-right-info">
+                                            <p class="btn">
+                                                <a class="red-btn" href="/book/17033830205432804" target="_blank" data-eid="qd_E02" data-bid="17033830205432804">免费阅读</a>
+                                                
+                                                <a class="border-btn add-book" href="javascript:" data-eid="qd_E03" data-bookid="17033830205432804" data-bid="17033830205432804">加入书架</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    
+                                    <li data-rid="3">
+                                        <div class="book-img-box">
+                                            <a href="/book/15404483505613704" data-eid="qd_E04" data-bid="15404483505613704" target="_blank"><img src="//bookcover.yuewen.com/qdbimg/349573/c_15404483505613704/150"></a>
+                                        </div>
+                                        <div class="book-mid-info">
+                                            <h4><a href="/book/15404483505613704" target="_blank" data-eid="qd_E05" data-bid="15404483505613704">御兽女王求收养</a></h4>
+                                            <p class="author">
+                                                <img src="//qidian.gtimg.com/hongxiu/images/ico/account.1e031.png"><a class="default name" data-eid="qd_E06">慵懒的雨滴</a><em>|</em><a data-eid="qd_E07" href="/all?catId=30013" target="_blank">古代言情</a><em>|</em><span>连载中</span>
+                                            </p>
+                                            <p class="intro">
+                                                她苏小米毕生的愿望就是做一只米虫，偏偏天生劳苦命，难得的休息天在家睡会午觉，房间里的吊灯突然坠落，就这么把她砸死了。
+穿越后又成了一个小丫鬟，自家主子还是不受宠的那种！主子想要嫁给王爷？咬着指头想想，要是主子真当上王妃也不错啊！想尽一切办法把主子往王爷面前送，可是王爷您为什么偏偏盯上我呢？但要是能当上王妃，貌似做米虫的愿望也就实现了？
+                                            </p>
+                                            <p class="update"><a href="/chapter/15404483505613704/49952951355546373" data-eid="qd_E08" data-bid="15404483505613704" data-cid="//www.hongxiu.com/book/15404483505613704/49952951355546373" target="_blank">最新更新  第三十九章 上战场</a><em>·</em><span>2020-11-30 19:00:00</span>
+                                            </p>
+                                        </div>
+                                        <div class="book-right-info">
+                                            <p class="btn">
+                                                <a class="red-btn" href="/book/15404483505613704" target="_blank" data-eid="qd_E02" data-bid="15404483505613704">免费阅读</a>
+                                                
+                                                <a class="border-btn add-book" href="javascript:" data-eid="qd_E03" data-bookid="15404483505613704" data-bid="15404483505613704">加入书架</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    
+                                    <li data-rid="4">
+                                        <div class="book-img-box">
+                                            <a href="/book/18358839808137304" data-eid="qd_E04" data-bid="18358839808137304" target="_blank"><img src="//bookcover.yuewen.com/qdbimg/349573/c_18358839808137304/150"></a>
+                                        </div>
+                                        <div class="book-mid-info">
+                                            <h4><a href="/book/18358839808137304" target="_blank" data-eid="qd_E05" data-bid="18358839808137304">在反派的忍耐边缘反复试探</a></h4>
+                                            <p class="author">
+                                                <img src="//qidian.gtimg.com/hongxiu/images/ico/account.1e031.png"><a class="default name" data-eid="qd_E06">板栗蛋挞</a><em>|</em><a data-eid="qd_E07" href="/all?catId=30008" target="_blank">仙侠奇缘</a><em>|</em><span>连载中</span>
+                                            </p>
+                                            <p class="intro">
+                                                一觉醒来，宁越穿到睡前正读的小说里成了炮灰女配，从此开启求生路。
+听说这位女配是男女主爱情路上最大的路障？并且最后还被反派男配砍了头？
+还要被系统按头完成在大反派的忍耐边缘反复试探的任务。
+宁越心里苦但宁越不能说。
+她瑟瑟发抖，决定抱紧男配大腿，该怎么怂就怎么怂！
+沈淮：呵蠢女人。
+若干年后，
+沈淮：越越，想你。
+我不属于这个世界，我只属于你
+                                            </p>
+                                            <p class="update"><a href="/chapter/18358839808137304/50210486721425242" data-eid="qd_E08" data-bid="18358839808137304" data-cid="//www.hongxiu.com/book/18358839808137304/50210486721425242" target="_blank">最新更新  第75章 寻欢作乐（2）</a><em>·</em><span>2020-12-04 22:36:17</span>
+                                            </p>
+                                        </div>
+                                        <div class="book-right-info">
+                                            <p class="btn">
+                                                <a class="red-btn" href="/book/18358839808137304" target="_blank" data-eid="qd_E02" data-bid="18358839808137304">免费阅读</a>
+                                                
+                                                <a class="border-btn add-book" href="javascript:" data-eid="qd_E03" data-bookid="18358839808137304" data-bid="18358839808137304">加入书架</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+         
+                      <div class="footer">
+	            <div class="box-center cf">
+		            <div class="footer-menu dib-wrap">
+			            <a href="#" target="_blank" >关于我们</a>
+			            <a href="#" target="_blank" rel="nofollow">联系我们</a>
+			            <a href="#" target="_blank" rel="nofollow">帮助中心</a>
+			            <a href="#" target="_blank" rel="nofollow">客服中心</a>
+			            <a href="#" target="_blank">加入我们</a>
+			            <a href="#" target="_blank" rel="nofollow">举报中心</a>
+		            </div>
+		            <div class="copy-right">
+		            <p><span>Copyright © 1999-2020 www.shuhai.com All Rights Reserved</span>
+		           		 版权所有 书海科技发展有限公司</p>
+		           <p>书海科技发展有限公司 蒙ICP证208999号 <a href="#" target="_blank" rel="nofollow">蒙ICP证208999号-1</a>
+		            <a href="#" style="display: inline-block" target="_blank" rel="nofollow">
+		            <img src="//qidian.gtimg.com/hongxiu/images/beian.d0289.png" style="float: left">蒙公网安备 11010502030109号</a>蒙网文[2015]0006-006号新出网证（蒙）字204号</p>
+		            <p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！客服电话：010-59357051</p>
+		            <p>联系方式 总机 010-83050798-6900 地址：内蒙赤峰鑫源东路7号楼-2至8层101内北区7层706室</p>
+		            <p>本站所收录作品、社区话题、书库评论及本站所做之广告均属个人行为，与本站立场无关</p>
+		            </div>
+		            <div class="safety-box">
+			            <div class="safety-img dib-wrap">
+				            <a class="site1" href="http://www.12377.cn" target="_blank" rel="nofollow">
+				            </a>
+				            <a class="site2" href="http://www.shjbzx.cn" target="_blank" rel="nofollow">
+				            </a>
+				            <a class="site3" href="https://ss.knet.cn/verifyseal.dll?sn=e17103011010869321wsdl000000&amp;a=1&amp;pa=0.8369620393163408" target="_blank" rel="nofollow">
+				            </a>
+			            </div>
+		            </div>
+	            </div>
+            </div>
+  
+    </div>
+    </div>
+</body>
+</html>
+

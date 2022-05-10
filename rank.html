@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>书海网</title>
+    <link rel="SHORTCUT ICON" href=image/title_img.ico />
+    <script src="active.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/rank.css" > 
+        <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1498489_dqmy6saca8.css">
+
+<!--    <link rel="stylesheet" type="text/css" href="css/style.css" >   
+-->
+</head>
+
+<body >
+	<script src="//at.alicdn.com/t/font_1498489_wwnavj5my9.js"></script>
+    <div class="wrap home">
+        <div id="header">
+	        	<div class="cf layer">
+	                <h1 class="logo fl" title="书海">
+	                    <a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/novel.html">书海小说网</a>
+	                </h1>
+	            
+	            <div class="search-wrap " >
+	                <form  id="formUrl" action="/search" method="get" target="_blank">
+	                    <input class="search-box fl" id="s-box" name="kw" type="text" placeholder="傲气如我" autocomplete="off" value="">
+	                    <input class="submit-input" type="submit" id="searchSubmit" data-eid="">
+	                    <label id="search-btn" class="search-btn fl" for="searchSubmit">
+								<i class="iconfont icon-linedesign-12 c42"></i>            
+	                    </label>
+	                </form>
+	            </div>
+	            <div class="user-wrap cf">
+	            	<ul class="fr">
+		            	<li>
+		            		<a class="head-shelf" href="javascript:">
+		            			<i class="iconfont icon-ziyuan22 c42"></i> 我的书架
+		            		</a>
+		            	</li>
+		            	<li >
+		            		<a class="head-msg " href="javascript:" >
+		            			<i class="iconfont icon-xinfeng1 c42"></i> 消息中心
+		            		</a>
+		            	</li>
+		            	<li >
+		            		<div class="avatar fr " id="j-userWrap">
+			            	<a class="link fl" href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/login.html" id="j-avatar">
+								<i class="iconfont icon-yonghu"></i> 登录           
+			            	</a>
+		            		</div>
+	
+		            	</li>
+
+		            </ul>
+	            
+		            
+	            </div>
+	</div>
+	</div>
+	            <div class="top-nav-wrap c42">
+	                <div class="layer cf">
+	                    <div class="left-nav fl">
+							<ul >
+								<li onMouseOver="show(this)" onMouseOut="hide(this)" class="type " id="j-navType">
+									<a href="#" class="pull">
+										<i class="iconfont icon-caidan"></i>
+										全部分类
+									</a>
+										<ul class="sort-list" style="display: none;">
+											<li><a href="">现代言情</a></li>
+	     									<li><a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/pre.html">古代言情</a></li>
+											<li><a href="">浪漫青春</a></li>
+	     									<li><a href="">玄幻言情</a></li>
+	     									<li><a href="">仙侠奇缘</a></li>
+	     									<li><a href="">悬疑</a></li>
+											<li><a href="">科幻空间</a></li>
+	     									<li><a href="">游戏竞技</a></li>
+	     							        <li><a href="">短篇小说</a></li>
+	     									<li><a href="">轻小说</a></li>
+										</ul>
+								</li>		
+								<li  style=" border-bottom: 3px solid #fff;">
+									<a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/rank.html">排行榜</a></li>
+									
+								<li><a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/free.html">免费</a></li>
+								<li><a href="#">完本</a></li>
+								<li><a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/pre.html">古言</a></li>
+								<li><a href="#">现言</a></li>
+								<li><a href="#">玄幻仙侠</a></li>
+								<li><a href="#">悬疑科幻</a></li>
+								<li><a href="#">青春游戏</a></li>
+								<li><a href="#">风尚阁</a></li>
+								<li><a href="#">版权专区</a></li>
+							</ul>
+	                    </div>
+	                    <div class="right-nav ">
+	                         <ul >
+	                         	<li class="fl">
+	                         		<a href="#">
+	                         			<i class="iconfont icon-qian"></i> 充值
+	                         		</a>
+	                         	</li>
+	                         	<li>
+	                         		<a href="#">
+	                         			<i class="iconfont icon-gangbi"></i>作家专区
+	                         		</a>
+	                         	</li>
+	                         </ul>
+	                    </div>
+	                </div>
+	         </div>
+	    
+	   
+	    <div class="rank-box box-center cf">
+                
+<div class="rank-nav-list fl">
+        <ul>
+            <li class="act"><a href="/rank"><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-jiangbei"></use></svg>全部榜单</a></li>
+            <li class=""><a href=""><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-huomiao"></use></svg>热销榜</a></li>
+            <li class=""><a href=""><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-yun1"></use></svg>风云榜</a></li>
+            <li class=""><a href=""><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-book"></use></svg>新书榜</a></li>
+            <li class=""><a href="/rank/recom"><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-benzhoutuijian"></use>
+			</svg>周推荐榜</a></li>
+            <li class=""><a href="/rank/finish"><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-wanben"></use></svg>完本榜</a></li>
+            <li class=""><a href="/rank/update"><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-gengxin1"></use></svg>更新榜</a></li>
+            <li class=""><a href="/rank/reward"><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-liwu"></use></svg>礼物榜</a></li>
+            <li class=""><a href=""><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-dianji"></use></svg>点击榜</a></li>
+            <li class=""><a href=""><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-shoucang"></use></svg>收藏榜</a></li>
+            <li class=""><a href=""><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-qianyue"></use></svg>签约作者新书榜</a></li>
+            <li class=""><a href=""><svg class="icon" aria-hidden="true">
+    			<use xlink:href="#icon-renqi1"></use></svg>公众作品人气榜</a></li>
+        </ul>
+</div>
+        <div class="main-content-wrap fl">
+            <div class="rank-body cf">
+                <div class="rank-list">
+                    <h3 class="wrap-title"><em class="lang">热销榜</em></h3>
+                    <div class="book-rank-list">
+                        
+                        <ul>
+                            
+                            <li><span class="num1">1</span><a class="name" href="//www.hongxiu.com/book/17037639705370004" target="_blank">团宠反派被病娇缠上了</a></li>
+                            
+                            <li><span class="num2">2</span><a class="name" href="//www.hongxiu.com/book/9743170703944503" target="_blank">别闹，薄先生！</a></li>
+                            
+                            <li><span class="num3">3</span><a class="name" href="//www.hongxiu.com/book/17755279506421504" target="_blank">致命偏宠</a></li>
+                            
+                            <li><span class="num4">4</span><a class="name" href="//www.hongxiu.com/book/16792364604322104" target="_blank">嫡长女她又美又飒</a></li>
+                            
+                            <li><span class="num5">5</span><a class="name" href="//www.hongxiu.com/book/15488011805011204" target="_blank">夫人每天都在线打脸</a></li>
+                            
+                            <li><span class="num6">6</span><a class="name" href="//www.hongxiu.com/book/15303408704764304" target="_blank">墨染相思江南远</a></li>
+                            
+                            <li><span class="num7">7</span><a class="name" href="//www.hongxiu.com/book/15461321905681604" target="_blank">重生后我成了权臣的掌中娇</a></li>
+                            
+                            <li><span class="num8">8</span><a class="name" href="//www.hongxiu.com/book/15615963605534504" target="_blank">成亲后王爷暴富了</a></li>
+                            
+                            <li><span class="num9">9</span><a class="name" href="//www.hongxiu.com/book/16912769405036504" target="_blank">太子爷的鬼迷心窍</a></li>
+                            
+                            <li><span class="num10">10</span><a class="name" href="//www.hongxiu.com/book/8784068103724003" target="_blank">重生后她成了宋先生的小祖宗</a></li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="rank-list">
+                    <h3 class="wrap-title"><em class="lang">红袖风云榜</em></h3>
+                    <div class="book-rank-list">
+                        
+                        <ul>
+                            
+                            <li><span class="num1">1</span><a class="name" href="//www.hongxiu.com/book/16792364604322104" target="_blank">嫡长女她又美又飒</a></li>
+                            
+                            <li><span class="num2">2</span><a class="name" href="//www.hongxiu.com/book/17755279506421504" target="_blank">致命偏宠</a></li>
+                            
+                            <li><span class="num3">3</span><a class="name" href="//www.hongxiu.com/book/15615963605534504" target="_blank">成亲后王爷暴富了</a></li>
+                            
+                            <li><span class="num4">4</span><a class="name" href="//www.hongxiu.com/book/16129361004247204" target="_blank">我有五个大佬爸爸</a></li>
+                            
+                            <li><span class="num5">5</span><a class="name" href="//www.hongxiu.com/book/8784068103724003" target="_blank">重生后她成了宋先生的小祖宗</a></li>
+                            
+                            <li><span class="num6">6</span><a class="name" href="//www.hongxiu.com/book/18027614001145804" target="_blank">大恩以婚为报</a></li>
+                            
+                            <li><span class="num7">7</span><a class="name" href="//www.hongxiu.com/book/17327437004197204" target="_blank">离婚后影帝天天捡垃圾</a></li>
+                            
+                            <li><span class="num8">8</span><a class="name" href="//www.hongxiu.com/book/17156992805885304" target="_blank">快穿之安心做个路人甲</a></li>
+                            
+                            <li><span class="num9">9</span><a class="name" href="//www.hongxiu.com/book/18063052301960904" target="_blank">傍上金主后我爆红了</a></li>
+                            
+                            <li><span class="num10">10</span><a class="name" href="//www.hongxiu.com/book/15348559604183404" target="_blank">反穿之全能小厨娘</a></li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="rank-list">
+                    <h3 class="wrap-title"><em class="lang">新书榜</em></h3>
+                    <div class="book-rank-list">
+                        
+                        <ul>
+                            
+                            <li><span class="num1">1</span><a class="name" href="//www.hongxiu.com/book/18570420201396704" target="_blank">怪你过分宠溺</a></li>
+                            
+                            <li><span class="num2">2</span><a class="name" href="//www.hongxiu.com/book/18228045801600504" target="_blank">重生女配被炮灰病娇缠上了</a></li>
+                            
+                            <li><span class="num3">3</span><a class="name" href="//www.hongxiu.com/book/17509028007754204" target="_blank">听闻全服第一暗恋她许久</a></li>
+                            
+                            <li><span class="num4">4</span><a class="name" href="//www.hongxiu.com/book/18512218308090204" target="_blank">我在古代当团宠</a></li>
+                            
+                            <li><span class="num5">5</span><a class="name" href="//www.hongxiu.com/book/18567467608553804" target="_blank">有婚可乘</a></li>
+                            
+                            <li><span class="num6">6</span><a class="name" href="//www.hongxiu.com/book/18510921101855104" target="_blank">每天随机一个新老公</a></li>
+                            
+                            <li><span class="num7">7</span><a class="name" href="//www.hongxiu.com/book/18484967801406804" target="_blank">司爷的小祖宗马甲又掉了</a></li>
+                            
+                            <li><span class="num8">8</span><a class="name" href="//www.hongxiu.com/book/18504362701839504" target="_blank">夫人着迷了全世界</a></li>
+                            
+                            <li><span class="num9">9</span><a class="name" href="//www.hongxiu.com/book/18547776708094904" target="_blank">小侯爷他真香了</a></li>
+                            
+                            <li><span class="num10">10</span><a class="name" href="//www.hongxiu.com/book/18588970908962704" target="_blank">厉少他偏要以婚相许</a></li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="rank-list">
+                    <h3 class="wrap-title"><em class="lang">周推荐榜</em></h3>
+                    <div class="book-rank-list">
+                        
+                        <ul>
+                            
+                            <li><span class="num1">1</span><a class="name" href="//www.hongxiu.com/book/5457695904347701" target="_blank">凤引凰谋</a></li>
+                            
+                            <li><span class="num2">2</span><a class="name" href="//www.hongxiu.com/book/5457486504201101" target="_blank">幸福微咸</a></li>
+                            
+                            <li><span class="num3">3</span><a class="name" href="//www.hongxiu.com/book/5457486103461001" target="_blank">穿越之罹爱大唐</a></li>
+                            
+                            <li><span class="num4">4</span><a class="name" href="//www.hongxiu.com/book/5457485004200201" target="_blank">醒时花开又多少</a></li>
+                            
+                            <li><span class="num5">5</span><a class="name" href="//www.hongxiu.com/book/17755279506421504" target="_blank">致命偏宠</a></li>
+                            
+                            <li><span class="num6">6</span><a class="name" href="//www.hongxiu.com/book/16792364604322104" target="_blank">嫡长女她又美又飒</a></li>
+                            
+                            <li><span class="num7">7</span><a class="name" href="//www.hongxiu.com/book/17529639707804504" target="_blank">穿书后她玩脱了</a></li>
+                            
+                            <li><span class="num8">8</span><a class="name" href="//www.hongxiu.com/book/18304936001382204" target="_blank">暴君的小田妻</a></li>
+                            
+                            <li><span class="num9">9</span><a class="name" href="//www.hongxiu.com/book/15486855704515204" target="_blank">大神你人设崩了</a></li>
+                            
+                            <li><span class="num10">10</span><a class="name" href="//www.hongxiu.com/book/17561263506800604" target="_blank">暖阳不及情深</a></li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="rank-list">
+                    <h3 class="wrap-title"><em class="lang">完本榜</em></h3>
+                    <div class="book-rank-list">
+                        
+                        <ul>
+                            
+                            <li><span class="num1">1</span><a class="name" href="//www.hongxiu.com/book/15303408704764304" target="_blank">墨染相思江南远</a></li>
+                            
+                            <li><span class="num2">2</span><a class="name" href="//www.hongxiu.com/book/8263527304935303" target="_blank">恰似寒光遇骄阳</a></li>
+                            
+                            <li><span class="num3">3</span><a class="name" href="//www.hongxiu.com/book/16425984005666504" target="_blank">兽世之我被冷血暴君盯上了</a></li>
+                            
+                            <li><span class="num4">4</span><a class="name" href="//www.hongxiu.com/book/4818982104534803" target="_blank">许你万丈光芒好</a></li>
+                            
+                            <li><span class="num5">5</span><a class="name" href="//www.hongxiu.com/book/15275568705452104" target="_blank">裴影帝的第六任老婆</a></li>
+                            
+                            <li><span class="num6">6</span><a class="name" href="//www.hongxiu.com/book/5955821204131503" target="_blank">凤回巢</a></li>
+                            
+                            <li><span class="num7">7</span><a class="name" href="//www.hongxiu.com/book/3675832204934203" target="_blank">天医凤九</a></li>
+                            
+                            <li><span class="num8">8</span><a class="name" href="//www.hongxiu.com/book/12636639904939703" target="_blank">快穿之男主全都崩坏了</a></li>
+                            
+                            <li><span class="num9">9</span><a class="name" href="//www.hongxiu.com/book/9309422203117003" target="_blank">似锦</a></li>
+                            
+                            <li><span class="num10">10</span><a class="name" href="//www.hongxiu.com/book/9716832403798403" target="_blank">侯府娇宠</a></li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="rank-list">
+                    <h3 class="wrap-title"><em class="lang">更新榜</em></h3>
+                    <div class="book-rank-list">
+                        
+                        <ul>
+                            
+                            <li><span class="num1">1</span><a class="name" href="//www.hongxiu.com/book/17726310306112004" target="_blank">女反派这剧本我不演</a></li>
+                            
+                            <li><span class="num2">2</span><a class="name" href="//www.hongxiu.com/book/17094703805231104" target="_blank">攻略反派大佬的三十六计</a></li>
+                            
+                            <li><span class="num3">3</span><a class="name" href="//www.hongxiu.com/book/17915795708063504" target="_blank">作死反派在线洗白</a></li>
+                            
+                            <li><span class="num4">4</span><a class="name" href="//www.hongxiu.com/book/17679014807876804" target="_blank">觉醒吧虐文女主</a></li>
+                            
+                            <li><span class="num5">5</span><a class="name" href="//www.hongxiu.com/book/17531238507784104" target="_blank">少女死神有点狠</a></li>
+                            
+                            <li><span class="num6">6</span><a class="name" href="//www.hongxiu.com/book/17875695308261404" target="_blank">烟入她骨</a></li>
+                            
+                            <li><span class="num7">7</span><a class="name" href="//www.hongxiu.com/book/16440072105352904" target="_blank">我的世界圈你入怀</a></li>
+                            
+                            <li><span class="num8">8</span><a class="name" href="//www.hongxiu.com/book/18504362701839504" target="_blank">夫人着迷了全世界</a></li>
+                            
+                            <li><span class="num9">9</span><a class="name" href="//www.hongxiu.com/book/17966385408102704" target="_blank">他的掌中妻</a></li>
+                            
+                            <li><span class="num10">10</span><a class="name" href="//www.hongxiu.com/book/18027614001145804" target="_blank">大恩以婚为报</a></li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="rank-list">
+                    <h3 class="wrap-title"><em class="lang">打赏榜</em></h3>
+                    <div class="book-rank-list">
+                        
+                        <ul>
+                            
+                            <li><span class="num1">1</span><a class="name" href="//www.hongxiu.com/book/17037639705370004" target="_blank">团宠反派被病娇缠上了</a></li>
+                            
+                            <li><span class="num2">2</span><a class="name" href="//www.hongxiu.com/book/16114149405991904" target="_blank">王牌冷妻不好追</a></li>
+                            
+                            <li><span class="num3">3</span><a class="name" href="//www.hongxiu.com/book/16939644904579404" target="_blank">在偏执云爷怀里撒个娇</a></li>
+                            
+                            <li><span class="num4">4</span><a class="name" href="//www.hongxiu.com/book/17529639707804504" target="_blank">穿书后她玩脱了</a></li>
+                            
+                            <li><span class="num5">5</span><a class="name" href="//www.hongxiu.com/book/17155104204051104" target="_blank">夜寒深深醉思量</a></li>
+                            
+                            <li><span class="num6">6</span><a class="name" href="//www.hongxiu.com/book/17518899306907404" target="_blank">重生成校草大佬的小仙女</a></li>
+                            
+                            <li><span class="num7">7</span><a class="name" href="//www.hongxiu.com/book/15303408704764304" target="_blank">墨染相思江南远</a></li>
+                            
+                            <li><span class="num8">8</span><a class="name" href="//www.hongxiu.com/book/17755279506421504" target="_blank">致命偏宠</a></li>
+                            
+                            <li><span class="num9">9</span><a class="name" href="//www.hongxiu.com/book/15488011805011204" target="_blank">夫人每天都在线打脸</a></li>
+                            
+                            <li><span class="num10">10</span><a class="name" href="//www.hongxiu.com/book/16640733904639504" target="_blank">她甜不可攀</a></li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="rank-list">
+                    <h3 class="wrap-title"><em class="lang">点击榜</em></h3>
+                    <div class="book-rank-list">
+                        
+                        <ul>
+                            
+                            <li><span class="num1">1</span><a class="name" href="//www.hongxiu.com/book/8784068103724003" target="_blank">重生后她成了宋先生的小祖宗</a></li>
+                            
+                            <li><span class="num2">2</span><a class="name" href="//www.hongxiu.com/book/17755279506421504" target="_blank">致命偏宠</a></li>
+                            
+                            <li><span class="num3">3</span><a class="name" href="//www.hongxiu.com/book/18031619401007104" target="_blank">大佬同桌她又装乖</a></li>
+                            
+                            <li><span class="num4">4</span><a class="name" href="//www.hongxiu.com/book/17037639705370004" target="_blank">团宠反派被病娇缠上了</a></li>
+                            
+                            <li><span class="num5">5</span><a class="name" href="//www.hongxiu.com/book/5457374104142201" target="_blank">铁雪云烟</a></li>
+                            
+                            <li><span class="num6">6</span><a class="name" href="//www.hongxiu.com/book/16129361004247204" target="_blank">我有五个大佬爸爸</a></li>
+                            
+                            <li><span class="num7">7</span><a class="name" href="//www.hongxiu.com/book/16721853904017204" target="_blank">他将奔你而来</a></li>
+                            
+                            <li><span class="num8">8</span><a class="name" href="//www.hongxiu.com/book/18031735201068504" target="_blank">影后她又在虐渣了</a></li>
+                            
+                            <li><span class="num9">9</span><a class="name" href="//www.hongxiu.com/book/17966385408102704" target="_blank">他的掌中妻</a></li>
+                            
+                            <li><span class="num10">10</span><a class="name" href="//www.hongxiu.com/book/17518899306907404" target="_blank">重生成校草大佬的小仙女</a></li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="rank-list">
+                    <h3 class="wrap-title"><em class="lang">收藏榜</em></h3>
+                    <div class="book-rank-list">
+                        
+                        <ul>
+                            
+                            <li><span class="num1">1</span><a class="name" href="//www.hongxiu.com/book/11653675004256003" target="_blank">裴太太，你已婚！</a></li>
+                            
+                            <li><span class="num2">2</span><a class="name" href="//www.hongxiu.com/book/9569809304067303" target="_blank">暖风不及你情深</a></li>
+                            
+                            <li><span class="num3">3</span><a class="name" href="//www.hongxiu.com/book/13138512203205104" target="_blank">我们该去领证了</a></li>
+                            
+                            <li><span class="num4">4</span><a class="name" href="//www.hongxiu.com/book/10055726104646703" target="_blank">大神，不要轻易发糖！</a></li>
+                            
+                            <li><span class="num5">5</span><a class="name" href="//www.hongxiu.com/book/5459112004198101" target="_blank">哀家想去死一死</a></li>
+                            
+                            <li><span class="num6">6</span><a class="name" href="//www.hongxiu.com/book/11681184903685203" target="_blank">季先生，你老婆在这儿</a></li>
+                            
+                            <li><span class="num7">7</span><a class="name" href="//www.hongxiu.com/book/10867440203996703" target="_blank">来，让我撩一下</a></li>
+                            
+                            <li><span class="num8">8</span><a class="name" href="//www.hongxiu.com/book/12173694803682303" target="_blank">王牌甜妻初长成</a></li>
+                            
+                            <li><span class="num9">9</span><a class="name" href="//www.hongxiu.com/book/9959396403152003" target="_blank">蔺先生，一往情深</a></li>
+                            
+                            <li><span class="num10">10</span><a class="name" href="//www.hongxiu.com/book/13319461205305304" target="_blank">影帝甜妻，宠化了</a></li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+        <div id="index-wrap">
+         
+                      <div class="footer">
+	            <div class="box-center cf">
+		            <div class="footer-menu dib-wrap">
+			            <a href="#" target="_blank" >关于我们</a>
+			            <a href="#" target="_blank" rel="nofollow">联系我们</a>
+			            <a href="#" target="_blank" rel="nofollow">帮助中心</a>
+			            <a href="#" target="_blank" rel="nofollow">客服中心</a>
+			            <a href="#" target="_blank">加入我们</a>
+			            <a href="#" target="_blank" rel="nofollow">举报中心</a>
+		            </div>
+		            <div class="copy-right">
+		            <p><span>Copyright © 1999-2020 www.shuhai.com All Rights Reserved</span>
+		           		 版权所有 书海科技发展有限公司</p>
+		           <p>书海科技发展有限公司 蒙ICP证208999号 <a href="#" target="_blank" rel="nofollow">蒙ICP证208999号-1</a>
+		            <a href="#" style="display: inline-block" target="_blank" rel="nofollow">
+		            <img src="//qidian.gtimg.com/hongxiu/images/beian.d0289.png" style="float: left">蒙公网安备 11010502030109号</a>蒙网文[2015]0006-006号新出网证（蒙）字204号</p>
+		            <p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！客服电话：010-59357051</p>
+		            <p>联系方式 总机 010-83050798-6900 地址：内蒙赤峰鑫源东路7号楼-2至8层101内北区7层706室</p>
+		            <p>本站所收录作品、社区话题、书库评论及本站所做之广告均属个人行为，与本站立场无关</p>
+		            </div>
+		            <div class="safety-box">
+			            <div class="safety-img dib-wrap">
+				            <a class="site1" href="http://www.12377.cn" target="_blank" rel="nofollow">
+				            </a>
+				            <a class="site2" href="http://www.shjbzx.cn" target="_blank" rel="nofollow">
+				            </a>
+				            <a class="site3" href="https://ss.knet.cn/verifyseal.dll?sn=e17103011010869321wsdl000000&amp;a=1&amp;pa=0.8369620393163408" target="_blank" rel="nofollow">
+				            </a>
+			            </div>
+		            </div>
+	            </div>
+            </div>
+  
+    </div>
+    </div>
+</body>
+</html>

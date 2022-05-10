@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="SHORTCUT ICON" href=image/title_img.ico />
+		<link rel="stylesheet" href="css/login.css">
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1498489_sk3o0m7korn.css">
+	</head>
+	<body>
+		<div class="main">
+        <div class="banner">
+            <img src="image/Desert.jpg" alt="banner">
+        </div>
+ 
+        
+        <div class="loginbox">
+            <h3>登录</h3>
+            <form action="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/novel.html" method="get">
+                <!-- username -->
+                <div class="username">
+                    <em class="iconfont icon-youxiang fl"></em>
+                    <input type="text" name="username" class="fr" placeholder="手机号/会员名/邮箱" autocomplete="off">
+                </div>
+                <!-- password -->
+                <div class="password">
+                    <em class="iconfont icon-suo fl"></em>
+                    <input type="password" name="password" placeholder="密码" autocomplete="off">
+                </div>
+                <!-- verification -->
+                <div class="verification">
+                    <input type="text" name="verification" placeholder="验证码" autocomplete="off">
+                    <img src="image/verification.jpg" alt="verification">
+                </div>
+                <!-- login button -->
+                	<input type="submit" value="登录" class="loginbtn">
+ 
+                <!-- hint -->
+                <p class="hint">
+                    <label for="autologin">
+                        <input type="checkbox" name="autologin" id="autologin" class = "autologin" checked>
+                        <span></span>
+                        <b class="autologinlabel">自动登录</b>
+                    </label>
+                    <a href="#">忘记密码?</a>
+                </p>
+ 
+                <!-- choose login methods -->
+                <div class="loginmethods">
+                    <label for="QQ">
+                        <input type="radio" name="loginmethod" id="QQ" class="radio">
+                        <span class="radiolabel QQ"></span><b class="radiodesc">QQ</b>
+                    </label>
+                    <label for="weibo">
+                        <input type="radio" name="loginmethod" id="weibo" class="radio">
+                        <span class="radiolabel weibo"></span><b class="radiodesc">微博</b>
+                    </label>
+                    <label for="wechat">
+                        <input type="radio" name="loginmethod" id="wechat" class="radio">
+                        <span class="radiolabel wechat"></span><b class="radiodesc">微信</b>
+                    </label>
+                    <a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/register.html">立即注册</a>                   
+                </div>
+            </form>
+        </div>
+    </div>
+	</body>
+</html>

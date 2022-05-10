@@ -1,0 +1,205 @@
+* {  margin: 0; 
+     padding: 0;
+ }
+a{
+	text-decoration: none;
+	color: black;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+/*.main{
+    width: 100%;
+    position: relative;
+}*/
+.main .banner{
+    height: 100%;
+}
+.main .banner > img{
+    width: 100%;
+    height: 100%;
+}
+.main .loginbox{
+   width: 350px;
+   height: 380px; 
+   background-color: #ffffff; 
+   position: absolute;
+   right: 120px;
+   top: 36px;
+   border-top: 3px solid #EE6910;
+}
+.main .loginbox > h3{
+    font:18px/1 "微软雅黑";
+    margin: 25px 0 25px 35px;
+}
+.main .loginbox > form .username,
+.main .loginbox > form .password{
+    width: 280px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #d8d8d8;
+}
+.main .loginbox > form .username{
+    margin: 25px 0 0 35px;
+}
+.main .loginbox > form .password{
+    margin: 13px 0 0 35px;
+}
+.main .loginbox > form .username:hover,
+.main .loginbox > form .password:hover{
+    border: 1px solid #f36b11;
+    color:#f36b11;
+}
+.main .loginbox > form .username > em,
+.main .loginbox > form .password > em{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: top;
+    border-right: 1px solid #d8d8d8;
+    background-color: #f4f4f4;
+    color: #c7c7c7;
+}
+.main .loginbox > form .username:hover > em,
+.main .loginbox > form .password:hover > em{
+    border-right: 1px solid #f36b11;
+    background-color: #fef9f6;
+    color:#f36b11;
+}
+.main .loginbox > form .username > input,
+.main .loginbox > form .password > input
+{
+    width: 225px;
+    height: 32px;
+    line-height: 30px;
+    font: 14px "宋体";
+    padding-left: 15px;
+    border-style:none ;
+        }
+.main .loginbox > form > .verification > input{
+    width: 193px;
+    height: 36px;
+    /* line-height: 36px; */
+    font-size: 14px/36px "宋体";
+    padding-left:16px;
+    border: 1px solid #d8d8d8;
+    margin:13px 0 0 35px;    
+}
+.main .loginbox > form > .verification > img{
+    margin: 18px 0 0 7px;
+    height: 20px;
+}
+.main .loginbox > form > .loginbtn{
+    width: 286px;
+    height: 40px;
+    background-color: #f36b11;
+    color: #ffffff;
+    font: 19px/40px "宋体";
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 25px 0 0 33px;
+}
+.main .loginbox > form > .hint{
+    font: 12px/1 "宋体";
+    color: #686868;
+    margin-top: 12px;
+}
+ 
+/* set new checkbox*/
+.main .loginbox > form > .hint >label> .autologin{
+    display: none;
+}
+.main .loginbox > form > .hint >label> .autologin[type=checkbox]:checked+span{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #d7d7d7;
+    color: #b5b5b5;
+    margin-left: 35px;
+    vertical-align: middle;
+}
+.main .loginbox > form > .hint >label>.autologin[type=checkbox]:checked+span:after{
+    content:'\2714';
+    font-size: 14px;
+}
+.main .loginbox > form > .hint >label> .autologinlabel{
+    margin-left:6px;
+}
+ 
+.main .loginbox > form > .hint > a{
+    color: #686868;
+    margin-left: 147px;  
+}
+.main .loginbox > form .loginmethods{
+    height:50px;
+    line-height: 50px;
+    margin-top: 30px;
+    border-top: 1px solid #efefef;
+}
+/* change radio styles */
+.main .loginbox > form .loginmethods .radio{
+    display: none;
+}
+.main .loginbox > form .loginmethods .radiolabel{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    /* border:1px solid #27a6f7; */
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+.main .loginbox > form .loginmethods .QQ{
+    border:1px solid #27a6f7;
+}
+.main .loginbox > form .loginmethods .weibo{
+    border: 1px solid #dc2b1b;
+}
+.main .loginbox > form .loginmethods .wechat{
+    border: 1px solid #1ae647;
+}
+ 
+.main .loginbox > form .loginmethods .radio:checked+ .radiolabel:after{
+    content:"";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    margin-top: 1px; 
+    margin-left: 1px;
+}
+
+.main .loginbox > form .loginmethods .radio:checked+ .QQ:after{
+    background: #27a6f7;
+}
+.main .loginbox > form .loginmethods .radio:checked+ .weibo:after{
+    background: #dc2b1b;
+}
+.main .loginbox > form .loginmethods .radio:checked+ .wechat:after{
+    background: #1ae647;
+}
+.main .loginbox > form .loginmethods .radio:checked + .QQ{
+    border: 1px solid #27a6f7;
+}
+.main .loginbox > form .loginmethods .radio:checked + .weibo{
+    border: 1px solid #dc2b1b;
+}
+.main .loginbox > form .loginmethods .radio:checked + .wechat{
+    border: 1px solid #1ae647;
+}
+.main .loginbox > form .loginmethods .radiodesc{
+    font:12px/1 "宋体";
+    color: #6d6d6d;
+    padding-left: 8px;
+}
+.main .loginbox > form .loginmethods > a{
+    font:14px/1 "宋体";
+    color: #f36b17;
+    margin-left:48px;
+}

@@ -1,0 +1,862 @@
+/*
+* @Author: Marte
+* @Date:   2020-11
+* @Last Modified by:   Marte
+* @Last Modified time: 2020-11-02 16:56:27
+*/
+* {  margin: 0; 
+     padding: 0;
+     font-family: PingFangSC-Regular,'-apple-system',Simsun;
+ }
+ em,i{
+ 	font-style: normal;
+ }
+.cf::after{
+     /*伪元素是行内元素 正常浏览器清除浮动方法*/
+        content: "";
+        display: block;
+        height: 0;
+        clear:both;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.c42{
+	    color: #f01742;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+ul  {  
+		list-style: none;
+		/*去点*/
+    }
+.lang {
+    font-family: PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
+}
+.wrap {
+    background: #fff5f5;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.box-center {
+    width: 1020px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.layer{
+    width: 1190px;
+    margin: 0 auto;    居中
+}
+#header {
+    padding: 25px 0 10px 0;
+    background: #fefefe;
+    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+}
+
+#header .logo a{
+    width: 130px;
+	height: 80px;
+    background: url(../image/logo.jpg) center no-repeat ;
+    background-size: 130px 80px;
+    display: block;
+    padding-left:40px ;
+	text-indent: -9999px;
+ /*左缩进*/
+    overflow: hidden;
+	}
+#header .search-wrap{
+	height: 20px;
+	margin:0 auto;
+
+    }
+#header .search-box {
+
+	  width: 244px;
+      height: 40px;
+      margin-top: 15px;
+      margin-left: 160px;
+	  box-sizing: border-box; 
+	  /*怪异盒模型*/
+	  border:2px solid #f01742;
+	  border-right:none;
+      padding: 0 10px 0 18px;
+	  border-radius: 20px 0 0 20px;
+	  overflow: hidden;
+	  position: relative;
+}
+
+#header .search-btn{
+	position: absolute;
+    float: left;
+    width: 80px;
+    height: 37px;
+    padding: 0 10px 0 18px;
+    margin-top: 15px;
+    border: 2px solid #f01742;
+    /*border-left-color: rgb(240, 23, 66);
+    border-left-style: solid;
+    border-left-width: 2px;*/
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+}
+#header .search-btn .icon-linedesign-12 {
+    font-size: 18px;
+    line-height: 37px;
+    display: block;
+    width: 18px;
+    margin: 0 auto;
+}
+.submit-input {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+#header .user-wrap {
+    position: relative;
+    float: right;
+}
+.user-wrap #j-userWrap{
+	margin-right:18px ;
+}
+
+#header .user-wrap li {
+    font: 16px;
+    height: 30px;
+    padding:0 3px;
+    margin:0 10px 0 12px;
+    float: left;
+}
+
+#header .down-drop {
+    position: absolute;
+    z-index: 1;
+    top: 64px;
+    right: 0;
+    display: none;
+    width: 100px;
+    background: #fff;
+}
+.user-wrap li a i{
+	font-size: 35px !important;
+}
+.user-wrap .link i{
+	color: gray !important;
+}
+
+
+.top-nav-wrap{
+	position: relative;
+	z-index: 3;
+    background: linear-gradient(to right,#fc0e50 0,#e97360 100%);
+}
+.top-nav-wrap  li {
+    font-family: PingFangSC-Regular,'-apple-system',Simsun;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    float: left;
+    height: 47px;
+    margin-left: 34px;
+    cursor: pointer;
+    transition: border .3s;
+    border-bottom: 3px solid transparent;
+ }   
+ .top-nav-wrap a{
+ 	color: white;
+ }
+ #j-navType:hover{
+ 	border-bottom: 3px solid #fff;
+ }
+.sort-list{
+            position:absolute;
+            list-style:none;
+            margin-top:2px;
+            width: 105px;
+            padding-right:20px;
+            font-size:20px;
+            border:0px solid black;
+            background:#ff5269;
+            z-index: 3;
+} 
+/**/
+#index-wrap {
+    position: relative;
+    margin: 0;
+    z-index: 1;
+}
+#index-wrap .flower{
+    position: absolute;
+    z-index: 0;
+    top: -20px;
+}
+#index-wrap .flower.left{
+    left: 0;
+    width: 236px;
+    height: 247px;
+    background-image: url(../image/flower_left.jpg);
+}
+#index-wrap .flower.right {
+    right: 0;
+    width: 430px;
+    height: 142px;
+    background-image: url(../image/flower_right.jpg);
+}
+.box-center {
+    width: 1020px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#index-wrap .focus-wrap{
+	position: relative;
+    width: 100%;
+    height: 292px;
+    margin-top: 20px;
+    border-radius: 6px;
+    background: #fff;
+}
+#index-wrap .focus-slider-wrap{
+	position: relative;
+    padding: 20px;
+}
+/*轮播图设置*/
+.focus-slider-wrap #j-focus-slider{
+	position: relative;
+	overflow: hidden;
+	width: 750px;
+	height: 252px
+}
+.focus-slider-wrap #pic {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 252px;
+}
+
+/*轮播图图片大小设置*/
+ .focus-slider-wrap  #pic li img {
+    z-index: 1;
+    float: left;
+    display: block;
+    width: 750px;
+    height: 252px;
+}
+#j-focus-slider #arrow a{
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #000;
+  cursor: pointer;
+  border:none;
+  /*去掉原来button的边框*/
+  background-color: rgba(0,0,0,0.2);
+  /*opacity只能整体，而它只透背景*/
+  position: absolute;
+  top: 50%;
+  /*中间 top 、margin*/
+  margin-top: -15px;
+}
+#prev{   
+	      border-radius: 0 15px 15px 0;
+}
+#next{
+	  right: 0;
+	border-radius:15px 0px 0px 15px;
+}
+#ar{
+	padding: 0;
+margin-left: 2px;}
+#list{
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  margin-left: -10px;
+  /*left 、margin一半 居中*/
+  background-color: rgba(20,0,0,0.2);
+  border-radius: 10px;
+  padding:3px 0;
+  font-size: 0;
+  /*有默认高度，小圆点背景比较大了*/
+}
+/*圆点设置*/
+#j-focus-slider ol li{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin:0 4px;
+  cursor: pointer;
+}
+#list li.on{
+  background-color: red;
+}
+/*公告*/
+#index-wrap .focus-notice-wrap{
+	position: relative;
+	
+}
+.focus-notice-wrap h3 {
+    font: 18px/24px PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1a1a1a;
+}
+.focus-notice-wrap .notice-list li {
+    overflow: hidden;
+    height: 37px;
+    border-top: 1px solid #e6e6e6;
+}
+
+
+/*编辑强推*/
+.index-book-wrap{
+	margin-top: 20px;
+	position: relative;
+	height: 488px;
+}
+.inner-wrap {
+	position: absolute;
+    padding: 20px;
+    border-radius: 6px;
+    background: #fff;
+}
+.left-wrap {
+    width: 730px;
+}
+.left-wrap h3 {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1a1a1a;
+}
+.edit-rec-wrap .type-new-list ul {
+    overflow: hidden;
+    width: 104%;
+}
+.edit-rec-wrap .type-new-list {
+    position: relative;
+    z-index: 1;
+}
+
+
+.edit-rec-wrap .type-new-list .line.l1 {
+    top: 146px;
+}
+.edit-rec-wrap .type-new-list .line.l2 {
+    top: 293px;
+}
+.edit-rec-wrap .type-new-list .line {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #d8d8d8;
+}
+.edit-rec-wrap .type-new-list ul {
+    overflow: hidden;
+    width: 104%;
+}
+
+.edit-rec-wrap .type-new-list li {
+    float: left;
+    width: 230px;
+    margin-right: 20px;
+    padding: 24px 0;
+}
+/*书的图片大小*/
+.book-img {
+	float:left;
+    width: 72px;
+    height: 96px;
+    border: 1px solid #e6e6e6;
+}
+.book-img a {
+    position: relative;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1px 6px rgba(0,0,0,.3),0 0 5px #f9f2e9 inset;
+}
+.book-info{
+	position: relative;
+     margin-top: 0px;
+	float: right;
+	width: 144px;
+	height: 96px;
+}
+.book-info h4 a:hover{
+	color: red;
+}
+.book-info h4 {
+    overflow: hidden;
+    height: 18px;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+.edit-rec-wrap .type-new-list li .book-info p {
+    font: 12px/20px PingFangSC-Regular,'-apple-system',Simsun;
+    overflow: hidden;
+    height: 40px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.state-box {
+    font-size: 12px;
+    line-height: 16px;
+}
+/*分类*/
+.state-box i {
+    float: right;
+    width: 52px;
+    height: 16px;
+    padding: 0 2px;
+    text-align: center;
+    color: #a6a6a6;
+    border: 1px solid #e7e7e7;
+    border-radius: 1px;
+}
+.state-box a {
+    display: block;
+    overflow: hidden;
+    height: 16px;
+    font-size: 12px;
+    margin-top: 1px;
+    padding-right: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*作者名字超过四个会有换行*/
+    color: #a6a6a6;
+}
+.state-box img{
+    width: 14px;
+    height: 14px;
+    margin: -2px 5px 0 0;
+    vertical-align: middle;
+    /*垂直使其居中*/
+}
+/*右边分类*/
+.right-wrap {
+    position: relative;
+    z-index: 1;
+    width: 230px;
+    margin-left: 20px;
+}
+
+.book-list-wrap {
+    width: 100%;
+}
+.book-list-wrap h3{
+	position: relative;
+    z-index: 1;
+    margin-bottom: 6px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1a1a1a;
+}
+.book-list-wrap .book-list li {
+    height: 31px;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 1px solid #e6e6e6;
+    overflow: hidden;
+}
+.book-list li a.channel {
+    overflow: hidden;
+    max-width: 50px;
+    vertical-align: middle;
+    margin-left: -7px;
+    color: grey;
+}
+.book-list-wrap .book-list li a.name {
+    overflow: hidden;
+    max-width: 154px;
+    font-size: 14px;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #1a1a1a;
+}
+.book-list-wrap .book-list li a:hover {
+    color: #f01742;
+}
+/*排行榜*/
+.rank-wrap {
+    overflow: hidden;
+    /*通过hidden+内容进行隔断*/
+    border-radius: 6px;
+}
+
+#rank-list-row{
+	position: relative;
+	padding: 20px;
+	margin-top: 20px;
+    border-radius: 6px;
+    background: #fff;
+}
+/*更紧凑*/
+.rank-list:first-child {
+    margin-left: 0;
+}
+
+.rank-list {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 230px;
+    margin-left: 20px;
+}
+.rank-list h3.wrap-title {
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-bottom: 12px;
+    
+    border-bottom: 1px solid #1a1a1a;
+}
+/*更多*/
+.rank-list a.more{
+	font-size: 14px;
+	float: right;
+	margin-top: 2px;
+	/*transition: opacity .3s;
+	opacity: 0;*/
+	color: #4284ed;
+}
+/*no.1*/
+.rank-list .book-list li.unfold {
+    zoom: 1;
+    height: 114px;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.book-wrap {
+    padding: 14px 0 0;
+}
+.book-wrap .book-info {
+    width: 132px;
+    position: relative;
+    margin-top: 0px;
+    float: left;
+    width: 144px;
+    height: 96px;
+}
+.book-info h3 {
+    font: 700 14px Arial;
+    width: 36px;
+    height: 18px;
+    margin: 0 0 6px;
+    text-align: center;
+    color: #fff;
+    background: #ff589d;
+}
+
+.imop {
+    margin-bottom: 8px;
+    color: #ff589d;
+}
+.book-info p.author {
+    font-size: 12px;
+    overflow: hidden;
+    height: 14px;
+}
+.book-info p.author a {
+    color: #a6a6a6;
+}
+.book-info p a:hover{
+	    color: #ff589d;
+
+}
+.book-wrap .book-cover {
+    position: relative;
+    z-index: 4;
+    float: right;
+ 
+    width: 52px;
+    height: 60px;
+    margin:0px 20px 0 0;
+    text-align: center;
+}
+.book-cover img{
+	width: 70px;
+	height: 90px;
+	border-radius: 5px;
+	box-shadow: 0 1px 6px rgba(0,0,0,.3),0 0 5px #f9f2e9 inset;
+}
+/*下面的每行*/
+.rank-list .book-list li {
+    clear: both;
+    /*这里要清浮动*/
+    height: 31px;
+}
+.rank-list .book-list li .num-box {
+    float: left;
+    width: 28px;
+    height: 32px;
+    }
+.rank-list .book-list li .name-box {
+    position: relative;
+    float: left;
+    text-align:left ;
+    height: 30px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.num-box span {
+    font: 700 14px Arial;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: 8px;
+    text-align: center;
+    color: #666;
+    background: #ededed;
+}
+.num-box span.num2 {
+    color: #fff;
+    background: #84e7d6;
+    display: block;
+	width: 16px;
+	height: 16px;
+	margin-top: 8px;
+	text-align: center;
+    padding: 1px;
+}
+.num-box span.num3 {
+    color: #fff;
+    background: #81de87;
+    display: block;
+	width: 16px;
+	height: 16px;
+	margin-top: 8px;
+	text-align: center;
+    padding: 1px;
+}
+.rank-list .book-list li .name-box a {
+    font: 14px/31px Simsun;
+    float: left;
+    width: 130px;
+}
+.name-box a.name {
+	font: 14px/31px Simsun;
+	/*14/32让它差不多在中间*/
+    overflow: hidden;
+    white-space: nowrap;
+    height: 32px;
+    text-overflow: ellipsis;
+	width: 170px;
+}
+.name-box a:hover{
+	color: red;
+}
+
+.rank-list .book-list li .name-box i {
+    font: 12px/32px Simsun;
+    float: right;
+    height: 32px;
+    width: 72px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+    color: #b3b3b3;
+}
+
+.banner-wrap img{
+	width: 100%;
+}
+
+
+
+.free-book-wrap {
+    height: 220px;
+    border-radius: 6px;
+    background: #fff;
+}
+.free-book-wrap .time-box {
+	margin-top: 25px;
+    width: 170px;
+    text-align: center;
+}
+.time-box h3 {
+    font-size: 18px;
+    line-height: 22px;
+    overflow: hidden;
+    height: 22px;
+    margin-bottom: 5px;
+    color: #f01742;
+}
+.time-box .type {
+    font-family: PingFangSC-Regular,'-apple-system',Simsun;
+    font-size: 12px;
+    overflow: hidden;
+    height: 16px;
+    padding: 2px 0;
+    color: #999;
+}
+.time-box .icon-time {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 8px auto;
+    background-image: url(../image/icon-time.c8149.png);
+    background-repeat: no-repeat;
+}
+.time-box .count {
+    overflow: hidden;
+    height: 22px;
+    margin-bottom: 10px;
+    color: #f01742;
+}
+.time-box .blue {
+    font-family: PingFangSC-Regular,'-apple-system',Simsun;
+    font-size: 14px;
+    display: block;
+    overflow: hidden;
+    height: 19px;
+    color: #2972cc;
+    vertical-align: middle;
+}
+
+.free-book-wrap ul {
+    width: 850px;
+    height: 220px;
+}
+.free-book-wrap li:hover,.time-box:hover {
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 5px 16px #2972cc;
+}
+.free-book-wrap li {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 211px;
+    height: 220px;
+    text-align: center;
+    border-left: 1px solid #f5f5f5;
+}
+
+.free-book-wrap li .book-img {
+   width: 72px;
+   height: 96px;
+   margin: 24px 0px 10px 70px;
+   border: 1px solid #e6e6e6;
+}
+.book-img a {
+    position: relative;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    float: left;
+    box-shadow: 0 1px 6px rgba(0,0,0,.3),0 0 5px #f9f2e9 inset;
+}
+.book-img a img {
+    width: 100%;
+    height: 100%;
+}
+.free-book-wrap li .name {
+    font: 16px/21px;
+    float: left;
+    display: block;
+    overflow: hidden;
+    margin-left: 30px;
+    height: 21px;
+    padding: 0 10px;
+}
+.free-book-wrap li s {
+   float: left;
+    font: 12px/14px Simsun;
+    overflow: hidden;
+    display: block;
+    height: 14px;
+    margin: 5px 0 5px 70px;
+    color: #999;
+}
+.free-book-wrap li .light-border-btn {
+    font: 14px/30px Simsun;
+    float: left;
+    display: block;
+    width: 98px;
+    height: 30px;
+    margin-left: 50px;
+    text-align: center;
+    color: #f01742;
+    border: 1px solid #ffd5db;
+    border-radius: 20px;
+}
+
+.light-border-btn:hover {
+    background: #ffeaed;
+}
+
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    background: #ffebee;
+}
+.box-center {
+    width: 1020px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.footer .footer-menu {
+    padding: 10px 0 6px 0;
+}
+.footer .footer-menu a {
+    color: #a5545f;
+}
+.footer .safety-box {
+    padding:20px 20px;
+/*    height: 100px;
+*/}
+.copy-right p, .footer .safety-box p {
+    font: 12px/20px PingFangSC-Regular,'-apple-system',Simsun;
+    overflow: hidden;
+    height: 20px;
+    color: #e5bdc3;
+}
+.footer .copy-right a, .footer .safety-box a {
+    margin: 0 5px;
+    color: #a5545f;
+}
+.footer .safety-img{
+    font-size: 0;
+}
+.footer .safety-img a.site1, .footer .safety-img a.site2, .footer .safety-img a.site3 {
+/*    overflow: hidden;
+*/    width: 128px;
+    height: 48px;
+    margin-right: 10px;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    background-image: url(../image/foot_site.344fc.png);
+}
+.footer .safety-img .site1 {
+    background-position: 0 -47px;
+}
+.footer .safety-img .site2 {
+    background-position: 0 0;
+}
+.footer .safety-img .site3 {
+    background-position: 0 -96px;
+}
+.dib-wrap a {
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: normal;
+    word-spacing: normal;
+}

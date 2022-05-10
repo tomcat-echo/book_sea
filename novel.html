@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>书海网</title>
+    <link rel="SHORTCUT ICON" href=image/title_img.ico />
+    <meta name="keywords" content="书海,小说网,手机小说,最新小说推荐,txt小说下载,免费小说下载网,小说阅读器全本免费小说,小说网站排名,小说在线阅读,3g小说网">
+    <meta name="description" content="书海唯一官方网站。书海提供古言、现言、原创、玄幻、都市、言情、娱乐、种田、科幻、悬疑、穿越、重生、宠文等小说,最新全本免费手机小说阅读推荐,精彩尽在书海网。">
+    <script src="active.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" >   
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1498489_dqmy6saca8.css">
+</head>
+<body >
+    <div class="wrap home">
+        <div id="header">
+	        	<div class="cf layer">
+	                <h1 class="logo fl" title="书海">
+	                    <a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/novel.html">书海小说网</a>
+	                </h1>
+	            
+	            <div class="search-wrap " >
+	                <form  id="formUrl" action="/search" method="get" target="_blank">
+	                    <input class="search-box fl" id="s-box" name="kw" type="text" placeholder="傲气如我" autocomplete="off" value="">
+	                    <input class="submit-input" type="submit" id="searchSubmit" data-eid="">
+	                    <label id="search-btn" class="search-btn fl" for="searchSubmit">
+								<i class="iconfont icon-linedesign-12 c42"></i>            
+	                    </label>
+	                </form>
+	            </div>
+	            <div class="user-wrap cf">
+	            	<ul class="fr">
+		            	<li>
+		            		<a class="head-shelf" href="javascript:">
+		            			<i class="iconfont icon-ziyuan22 c42"></i> 我的书架
+		            		</a>
+		            	</li>
+		            	<li >
+		            		<a class="head-msg " href="javascript:" >
+		            			<i class="iconfont icon-xinfeng1 c42"></i> 消息中心
+		            		</a>
+		            	</li>
+		            	<li >
+		            		<div class="avatar fr " id="j-userWrap">
+			            	<a class="link fl" href="http://127.0.0.1:8020/web%e9%a1%b9%e7%9b%ae/login.html" id="j-avatar">
+								<i class="iconfont icon-yonghu"></i> 登录           
+			            	</a>
+		            		</div>
+		            		
+		            	</li>
+
+		            </ul>
+	            
+		            
+	            </div>
+	</div>
+	</div>
+	            <div class="top-nav-wrap c42">
+	                <div class="layer cf">
+	                    <div class="left-nav fl">
+							<ul >
+								<li onMouseOver="show(this)" onMouseOut="hide(this)" class="type " id="j-navType">
+									<a href="#" class="pull">
+										<i class="iconfont icon-caidan"></i>
+										全部分类
+									</a>
+										<ul class="sort-list" style="display: none;">
+											<li><a href="#">现代言情</a></li>
+	     									<li><a href="pre.html">古代言情</a></li>
+											<li><a href="#">浪漫青春</a></li>
+	     									<li><a href="#">玄幻言情</a></li>
+	     									<li><a href="#">仙侠奇缘</a></li>
+	     									<li><a href="#">悬疑</a></li>
+											<li><a href="#">科幻空间</a></li>
+	     									<li><a href="#">游戏竞技</a></li>
+	     							        <li><a href="#">短篇小说</a></li>
+	     									<li><a href="#">轻小说</a></li>
+										</ul>
+								</li>		
+								<li><a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/rank.html">排行榜</a></li>
+								<li><a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/free.html">免费</a></li>
+								<li><a href="#">完本</a></li>
+								<li><a href="http://127.0.0.1:8848/web%E9%A1%B9%E7%9B%AE/pre.html">古言</a></li>
+								<li><a href="#">现言</a></li>
+								<li><a href="#">玄幻仙侠</a></li>
+								<li><a href="#">悬疑科幻</a></li>
+								<li><a href="#">青春游戏</a></li>
+								<li><a href="#">风尚阁</a></li>
+								<li><a href="#">版权专区</a></li>
+							</ul>
+	                    </div>
+	                    <div class="right-nav ">
+	                         <ul >
+	                         	<li class="fl">
+	                         		<a href="#">
+	                         			<i class="iconfont icon-qian"></i> 充值
+	                         		</a>
+	                         	</li>
+	                         	<li>
+	                         		<a href="#">
+	                         			<i class="iconfont icon-gangbi"></i>作家专区
+	                         		</a>
+	                         	</li>
+	                         </ul>
+	                    </div>
+	                </div>
+	         </div>
+	    
+	    <script type="text/javascript">
+			 window.onload=function(){
+			 var wrap=document.getElementById('j-focus-slider');
+			 pic=document.getElementById('pic').getElementsByTagName('li');
+			 list=document.getElementById('list').getElementsByTagName('li');
+			 index=0;
+			 timer=null;
+		
+	        var next = document.getElementById("next");
+	        var prev = document.getElementById("prev");
+	        next.onclick = function () {
+	            next_pic();
+	        }
+	        prev.onclick = function () {
+	            prev_pic();
+	        }
+	         function next_pic () {
+	            index++;
+	            if(index > 4){
+	                index = 0;
+	            }
+	            changePic(index);
+	
+			}	 
+			function prev_pic () {
+	            index--;
+	            if(index <0){
+	                index = 4;
+	            }
+	            changePic(index);
+	
+			}	 
+			 // 定义并调用自动播放函数
+			 timer = setInterval(autoPlay, 2000);
+			 
+			 // 鼠标划过整个容器时停止自动播放
+			 wrap.onmouseover = function () {
+			 clearInterval(timer);
+			 }
+			 
+			 // 鼠标离开整个容器时继续播放至下一张
+			 wrap.onmouseout = function () {
+			 timer = setInterval(autoPlay, 2000);
+			 }
+			 // 遍历所有数字导航实现划过切换至对应的图片
+			 for (var i = 0; i < list.length; i++) {
+			 list[i].onmouseover = function () {
+			 clearInterval(timer);
+			 index = this.innerText - 1;
+			 changePic(index);
+			 };
+			 };
+			 
+			 function autoPlay () {
+			 if (++index >= pic.length) index = 0;
+			 changePic(index);
+			 }
+			 
+			 // 定义图片切换函数
+			 function changePic (curIndex) {
+			 for (var i = 0; i < pic.length; ++i) {
+			 pic[i].style.display = "none";
+			 list[i].className = "";
+			 }
+			 pic[curIndex].style.display = "block";
+			 list[curIndex].className = "on";
+			 }
+			 countDown();
+						          function addZero(i) {
+						              return i < 10 ? "0" + i: ""+ i ;
+						              //添零
+						          }
+						          function countDown() {
+						              var nowtime = new Date();//获取当前时间
+						              var endtime = new Date("2023/12/16,17:57:00");
+						              var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+						              //以秒为单位
+						              var d = parseInt(lefttime / (24*60*60))
+						              var h = parseInt(lefttime / (60 * 60) % 24);
+						              var m = parseInt(lefttime / 60 % 60);
+						              var s = parseInt(lefttime % 60);
+						              h = addZero(h);
+						              m = addZero(m);
+						              s = addZero(s);
+						                 document.getElementById("count").innerHTML=d+"天"+h+"小时"+m+"分"+s+"秒";
+						              if (lefttime <= 0) {
+						                  document.getElementById("count").innerHTM = "活动已结束";
+						                  return;
+						              }
+						              setTimeout(countDown, 1000);
+						              //1秒刷新一次
+						            }
+			 }
+			 
+						     
+ 
+ </script> 
+	    
+        <div id="index-wrap">
+            <div class="flower left"></div>
+            <div class="flower right"></div>
+            <div class="box-center">
+            	<div class="focus-wrap cf">
+            		<div class="focus-slider-wrap cf">
+            			<div id="j-focus-slider" class="fl" >
+            				<ul id="pic">
+            					<li >
+            						<a href="#" target="_blank">
+            							<img src="//bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/da051756fd2465aa81278021adad251f.jpg" alt="反穿之全能小厨娘"></a>
+            					</li>
+            					<li  >
+            						<a href="#" target="_blank">
+            							<img src="//bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/669c04416297c1e4f188726b815fd83f.jpg" alt="男神投喂指南"></a>
+            					</li>
+            					<li >
+            						<a href="#" target="_blank">
+            							<img src="//bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/c145327caff84bd8cfbf0ac93ca3c130.jpg" alt="傅医生是醋缸"></a>
+            					</li>
+            					<li >
+            						<a href="#" target="_blank"><img src="//bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/656609c8868611893ad76dfaa5fc0ac3.jpg" alt="农女医妃富甲天下"></a>
+            					</li>
+            					<li >
+            						<a href="#" target="_blank"><img src="//bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/4eb7bf511037a9e937ce05ea4e077018.jpg" alt="觉醒吧虐文女主"></a>
+            					</li>
+            				</ul>
+            				<div id="arrow">
+            					<a href="javascript:" id="prev" class="arrow">&lt;</a>
+        					    <a href="javascript:" id="next" class="arrow"><span id="ar">
+        					    	&gt;
+        					    </span></a>
+            				</div>
+            				
+            				<!--<i class="iconfont icon-xiangyou1 al "></i>
+							<i class="iconfont icon-arrow-right-copy ar"></i>-->
+							<ol id="list">
+								<li class="on">1</li><li>2</li><li>3</li><li>4</li><li>5</li>
+						   </ol>
+             </div>
+             <div class="focus-notice-wrap fr">
+						<h3><i class="iconfont icon-xinbaniconshangchuan-"></i><span>公告</span></h3>
+						<div class="notice-list">
+							<ul>
+								<li class="rec">
+									<a href="#" target="_blank">
+										<span>[公告]</span>墨初舞新书火热连载中</a>
+								</li>
+								<li class=""><a href="#" target="_blank"><span>[公告]</span>北京十月文学月限免</a>
+									
+								</li>
+								<li class=""><a href="#" target="_blank"><span>[公告]</span>红袖作家福利</a>
+									
+								</li>
+								<li class=""><a href="#" target="_blank"><span>[公告]</span>非童凡响童心入梦征文</a>
+									
+								</li>
+								<li class=""><a href="#" target="_blank"><span>[公告]</span>石榴杯征文大赛</a>
+									
+								</li>
+								<li class=""><a href="#" target="_blank"><span>[公告]</span>2020网络文学全明</a>
+									
+								</li>
+							</ul>
+						</div>
+					</div>
+        </div>     
+					
+            	</div>
+            <div class="index-book-wrap edit-rec-wrap mb20">
+            	<div class="inner-wrap cf">
+            		<div class="left-wrap fl ">
+            			<h3 class="lang">编辑强推</h3>
+            			<div id="new-book-list">
+            				<div class="type-new-list cf" >
+            					<div class="line l1">
+            						
+            					</div>
+            					<div class="line l2">
+            						
+            					</div>
+            					<ul>
+            						<li data-rid="1">
+            							<div class="book-img">
+            								<a href="#" target="_blank">
+            									<img src="//bookcover.yuewen.com/qdbimg/349573/c_18242831201004704/90" alt="我不好哄的">
+            								</a>
+            							</div>
+            							<div class="book-info">
+            								<h4>
+            									<a href="#"  target="_blank" title="我不好哄的">我不好哄的</a>
+            								</h4>
+            								<p>威风赫赫的顾柏衍终于承认自己眼瞎了，这么多年，竟没看出贝乐是女扮男装。其真实身份竟还是四大家都惹不起的“贝勒爷”而他还把贝乐当成纨绔小蠢蛋来养着。贝少作业写不完，顾先生来写。贝少不会打架，顾先生去打。贝少不知道和谁生了俩孩子，顾先生养。某天，萌宝奶声奶气的叫贝少：“妈妈要抱抱！”顾柏衍指着贝乐不耐的纠正道：“这个蠢玩意儿是你们的爸爸。&amp;
+            								</p>
+            								<div class="state-box cf">
+            									<i>现代言情</i>
+            									<a class="author default" target="_blank">
+            										<img src="//qidian.gtimg.com/hongxiu/images/ico/user.f22d3.png">小喵妖娆
+            									</a>
+            								</div>
+            							</div>
+            						</li>
+            						<li data-rid="2">
+            							<div class="book-img">
+            								<a href="#" data-eid="qd_F23" target="_blank">
+            									<img src="//bookcover.yuewen.com/qdbimg/349573/c_18079463908608404/90" alt="被陆先生宠成小祖宗">
+            								</a>
+            							</div>
+            							<div class="book-info">
+            								<h4>
+            									<a href="#" target="_blank" title="被陆先生宠成小祖宗">被陆先生宠成小祖宗</a>
+        									</h4>
+        									<p>“陆总，娱乐圈都在传太太和小鲜肉在谈恋爱！”陆宇深：“胡说八道！”下一秒陆氏夫妇的恩爱上了热搜头条。“陆总，太太和您青梅打架了！”陆宇深：“太太手疼吗？”随后就将青梅发小打包送出了国。“陆总，xx公司打压太太公司！”陆宇深：“欺负我女人！”第二天xx公司因</p>
+        									<div class="state-box cf">
+        										<i>现代言情</i>
+        										<a class="author default" target="_blank">
+        											<img src="//qidian.gtimg.com/hongxiu/images/ico/user.f22d3.png">云嘉洛</a>
+        									</div>
+            							</div>
+            						</li>
+            						<li data-rid="3">
+            							<div class="book-img">
+            								<a href="#" target="_blank">
+            									<img src="//bookcover.yuewen.com/qdbimg/349573/c_16129361004247204/90" alt="我有五个大佬爸爸">
+            								</a>
+            							</div>
+            							<div class="book-info">
+            								<h4>
+            									<a href="#" target="_blank" title="我有五个大佬爸爸">我有五个大佬爸爸</a>
+            								</h4>
+            								<p>被师傅捡来的小和尚五岁了，该下山找爸爸了。小和尚软软抱着一只小狼崽，迈着小短腿儿冲过去就抱着自己爸爸的大长腿奶声奶气的喊道“爸爸！”一声爸爸，喊得五位大佬齐齐虎躯一震！软软刚找到爸爸的时候：一号爸爸冷漠“小孩子什么的最麻烦了。”二号爸爸不屑“笑话，我有这么多喜欢我的粉丝，会在乎这多出来的一个小团子。”三号爸爸拎着小团子&amp;ldq</p>
+            								<div class="state-box cf">
+            									<i>现代言情</i>
+            									<a class="author default" target="_blank">
+            										<img src="//qidian.gtimg.com/hongxiu/images/ico/user.f22d3.png">单双的单</a>
+            								</div>
+            							</div>
+            						</li>
+            						<li data-rid="4">
+       									<div class="book-img">
+       										<a href="#" target="_blank">
+       											<img src="//bookcover.yuewen.com/qdbimg/349573/c_17510193706604704/90" alt="修仙满级后我重生了"></a>
+       									</div>
+       									<div class="book-info">
+       										<h4>
+    											<a href="#" target="_blank" title="修仙满级后我重生了">修仙满级后我重生了</a>
+       										</h4>
+       										<p>本书又名《偶像是如何破灭的～》前世牛逼轰轰的“剑道杀神”千仞奚陨落了。因杀孽过重陨落在飞升雷劫之下。重活一世，千仞奚发现自己竟来到了灵力浓郁的上古时代，附身到了一个被饿死的小姑娘身上。重踏仙路的她，惊喜的发现，身边人一个个竟然都是传说中的修真界大佬，自己曾经佩服的偶像。本打算少造杀孽早日飞升的千仞奚，很快就发现，现实往往比理想残忍。传说中威武霸气护犊子的师尊，实则是个简单粗</p>
+       										<div class="state-box cf">
+       											<i>仙侠奇缘</i><a class="author default"  target="_blank">
+       											<img src="//qidian.gtimg.com/hongxiu/images/ico/user.f22d3.png">一颗小豌豆呀</a>
+       										</div>
+       									</div>
+            						</li>
+            						<li data-rid="5">
+            							<div class="book-img">
+            								<a href="#" target="_blank">
+            									<img src="//bookcover.yuewen.com/qdbimg/349573/c_17243079404918704/90" alt="司长大人请闭麦"></a>
+            							</div>
+            							<div class="book-info">
+            								<h4>
+            									<a href="#" target="_blank" title="司长大人请闭麦">司长大人请闭麦</a>
+            								</h4>
+            								<p>【骚话连篇腹黑直女检察官✘闷骚毒舌深情卑微外交官】自从当上了检察官，姜潼每天都过着她滋润的小日子。但某天却异常水逆，场上被撤诉了不说。但这新搬来的邻居是什么东西？她不就是晚上搂个小奶狗回家，准备和他打场游戏缓解情绪吗？当看到顶头上司桌面的那封检举信。姜潼忍无可忍的踹开了邻居的门，愤怒的指着面前的男人:“我招你惹你还是渣你了？”却不料被人反堵在墙角。薄南嘴角噙着笑，目光灼灼:</p>
+            								<div class="state-box cf">
+            									<i>现代言情</i>
+            									<a class="author default" target="_blank">
+            										<img src="//qidian.gtimg.com/hongxiu/images/ico/user.f22d3.png">北巷南柚</a>
+            								</div>
+            							</div>
+            						</li>
+            						<li data-rid="6">
+            							<div class="book-img">
+            								<a href="#" target="_blank">
+            									<img src="//bookcover.yuewen.com/qdbimg/349573/c_16803381505903504/90" alt="穿书后每天都在被迫撒娇">
+            								</a>
+            							</div>
+            							<div class="book-info">
+            								<h4>
+            									<a href="#" target="_blank" title="穿书后每天都在被迫撒娇">穿书后每天都在被迫撒娇</a>
+            								</h4>
+            								<p>穿成作死的恶毒女配，楚汐看见手段狠厉的男主，腿就发软。不想赴女配后尘，被男主折磨至死，楚汐哭的梨花带雨。裴书珩见她泪珠滚落，低低一笑。他漫不经心玩着锋利的匕首，在楚汐娇嫩的脸上滑过。眼里的疯狂再也藏不住。“只要你乖，我把命都给你。”</p>
+            								<div class="state-box cf">
+            									<i>古代言情</i>
+            									<a class="author default" target="_blank">
+            										<img src="//qidian.gtimg.com/hongxiu/images/ico/user.f22d3.png">温轻</a>
+            								</div>
+            							</div>
+            						</li>
+            						<li data-rid="7">
+            							<div class="book-img">
+            								<a href="#" target="_blank">
+            									<img src="//bookcover.yuewen.com/qdbimg/349573/c_12402428703285503/90" alt="与他婚路相逢"></a>
+            							</div>
+            							<div class="book-info">
+            								<h4><a href="#" target="_blank" title="与他婚路相逢">与他婚路相逢</a>
+            									
+            								</h4>
+            								<p>绯城人都说傅泊焉不解风情，冷得像块冰，却偏偏对低入尘埃的钟家养女钟意动了心上了瘾。心上人的婚礼上，她被傅先生困在灯影旖旎的角落：“被好朋友挖了墙脚还笑着拱手相让，是无奈成全？还是在……为他牺牲？”她的背脊抵在冰冷墙面上，眼角眉梢不禁漾出缱绻笑意：“傅先生要是追求我的话，他就是留在心底的风景。”男人夹烟的手落在她的红唇上，语</p>
+            								<div class="state-box cf">
+            									<i>现代言情</i><a class="author default"  target="_blank">
+            										<img src="//qidian.gtimg.com/hongxiu/images/ico/user.f22d3.png">秦若虚</a>
+            								</div>
+            							</div>
+            						</li>
+            						<li data-rid="8">
+            							<div class="book-img">
+            								<a href="#" target="_blank">
+            									<img src="//bookcover.yuewen.com/qdbimg/349573/c_17587103407549004/90" alt="学神她是内娱天花板"></a>
+            							</div>
+            							<div class="book-info">
+            								<h4><a href="#" target="_blank" title="学神她是内娱天花板">学神她是内娱天花板</a>
+            								
+	            							</h4>
+	            							<p>【宠妻狂魔狂狷巨佬男主vs身兼数技绝美面容天籁之音女主】不爱学习的学神凌岚笑再一次不务正业，踏入娱乐圈，一夜爆红。对家买黑稿：“不会演戏，连台词都不过关。”粉丝嘲笑黑粉：“不会吧不会吧，有人没长眼睛吗，请看看配音大赛的冠军是谁。”刁钻记者：“凌小姐，你是国奖得主为什么不好好读研，要当流量明星？”凌岚笑轻挑眉梢：“国</p>
+	            							<div class="state-box cf">
+	            								<i>现代言情</i>
+	            								<a class="author default" target="_blank">
+	            									<img src="//qidian.gtimg.com/hongxiu/images/ico/user.f22d3.png">衍宫沉雪</a>
+	            							</div>
+            							</div>
+            						</li>
+            						<li data-rid="9">
+            							<div class="book-img">
+            								<a href="#" target="_blank">
+            									<img src="//bookcover.yuewen.com/qdbimg/349573/c_16959298104723704/90" alt="老婆是隐形大佬"></a>
+            							</div>
+            							<div class="book-info">
+            								<h4><a href="#" target="_blank" title="老婆是隐形大佬">老婆是隐形大佬</a>
+            									
+            								</h4>
+            								<p>【女强+独宠+古武+电竞+微玄幻】沈家那位常年在深山习武的二小姐就要回京高考了。沈家人惊恐：二小姐命中带煞，克父克母克全家，轻易不要近她身！京城子弟嗤笑：山野村姑好控制，给点甜头就上套。只有某个疑似江湖骗子的老道士点着沈沐曦的头，一脸严肃：下山别给为师惹事！***回京半年后——沈家人一脸殷勤：我家二小姐是全村的希望，别耽误她赚钱！京城子弟鼻青脸肿：沈沐曦就不是个女人，拳头比</p>
+            								<div class="state-box cf">
+            									<i>现代言情</i>
+            									<a class="author default" target="_blank">
+            										<img src="//qidian.gtimg.com/hongxiu/images/ico/user.f22d3.png">苏家紫七</a>
+            								</div>
+            							</div>
+            						</li>
+            					</ul>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="right-wrap fr">
+            			<div class="book-list-wrap " >
+            				<h3 class="lang">
+            					<a href="/fsg">风尚阁</a>
+            					<em class="icon icon-fsg"></em>
+            				</h3>
+            				<div class="book-list ">
+            					<ul>
+            						<li data-rid="1">
+            							<a class="channel" href="#" target="_blank">
+            								<em>「</em>现代言情<em>」</em>
+            							</a>
+            							<a class="name" href="#"  target="_blank" title="医见婚心">医见婚心</a>
+            						</li>
+            						<li data-rid="2">
+            							<a class="channel" href="#"  target="_blank">
+            								<em>「</em>短篇<em>」</em>
+            							</a>
+            							<a class="name" href="#" target="_blank" title="归行处有你">归行处有你</a>
+            						</li>
+            						<li data-rid="3">
+            							<a class="channel" href="#" target="_blank">
+            								<em>「</em>现代言情<em>」</em>
+            							</a>
+            							<a class="name" href="#"  target="_blank" title="寻光掠影">寻光掠影</a>
+            						</li>
+            						<li data-rid="4">
+            							<a class="channel" href="#"target="_blank">
+            								<em>「</em>游戏竞技<em>」</em>
+            							</a>
+            							<a class="name" href="#" target="_blank" title="初恋是颗夹心糖">初恋是颗夹心糖</a>
+            						</li>
+            						<li data-rid="5">
+            							<a class="channel" href="#" target="_blank">
+            								<em>「</em>现代言情<em>」</em>
+            							</a>
+            							<a class="name" href="#"target="_blank" title="流鱼无恙">流鱼无恙</a>
+            						</li>
+            						<li data-rid="6"><a class="channel" href="#" target="_blank">
+            							<em>「</em>现代言情<em>」</em>
+            						</a>
+            						<a class="name" href="#" title="许医生家的小撒娇">许医生家的小撒娇</a>
+            						</li>
+            						<li data-rid="7">
+            							<a class="channel" href="#" target="_blank">
+            								<em>「</em>现代言情<em>」</em>
+            							</a>
+            							<a class="name" href="#" title="恃婚而骄">恃婚而骄</a>
+            						</li>
+            						<li data-rid="8">
+            							<a class="channel" href="#" target="_blank">
+            								<em>「</em>浪漫青春<em>」</em>
+            							</a>
+            							<a class="name" href="#" target="_blank" title="神明只身赴我">神明只身赴我</a>
+            						</li>
+            						<li data-rid="9">
+            							<a class="channel" href="#" target="_blank">
+            								<em>「</em>古代言情<em>」</em></a>
+            								<a class="name" href="#" target="_blank"  title="女帝在上">女帝在上</a>
+            						</li>
+            						<li data-rid="10">
+            							<a class="channel" href="#" target="_blank">
+            								<em>「</em>浪漫青春<em>」</em>
+            							</a>
+            							<a class="name" href="#" target="_blank" title="每天被迫看大佬营业">每天被迫看大佬营业</a>
+            						</li>
+            						<li data-rid="11">
+            							<a class="channel" href="#" target="_blank">
+            								<em>「</em>古代言情<em>」</em></a>
+            								<a class="name" href="#" target="_blank"  title="小唇丹">小唇丹</a>
+            						</li>
+            						<li data-rid="12">
+            							<a class="channel" href="/#" target="_blank">
+            								<em>「</em>古代言情<em>」</em></a>
+            								<a class="name" href="#" target="_blank" title="谁才是算无遗策">谁才是算无遗策</a>
+            						</li>
+            						<li data-rid="13">
+            							<a class="channel" href="" target="_blank">
+            								<em>「</em>现代言情<em>」</em>
+            							</a>
+            							<a class="name" href="#" target="_blank"  title="她在他心尖上映">她在他心尖上映</a>
+            						</li>
+            					</ul>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+            	
+            </div>
+            <div class="rank-wrap mb20">
+            	<div id="rank-list-row" class="rank-list-row inner-wrap cf">
+            		<div class="rank-list">
+            			<h3 class="wrap-title lang">华语言情风云榜
+            				<a class="more" href="#" target="_blank">更多<em class="iconfont">&gt;</em>
+            				</a>
+            			</h3>
+            			<div class="book-list">
+            				<ul>
+            					<li class="unfold" >
+		            				<div class="book-wrap cf">
+		            					<div class="book-info fl">
+		            						<h3>NO.1</h3>
+		            						<h4>
+		            							<a href="#" target="_blank" title="嫡长女她又美又飒">嫡长女她又美又飒</a>
+		            						</h4>
+		            						<p class="imop"><i>1864</i>月票</p>
+		            						<p class="author">
+		            							<a class="type" href="#" target="_blank">古代言情</a><i>·</i>
+		            							<a class="writer default">千桦尽落</a>
+		            						</p>
+		            					</div>
+		            					<div class="book-cover">
+		            						<a class="link" href="#" target="_blank">
+		            							<img src="//bookcover.yuewen.com/qdbimg/349573/c_16792364604322104/90" alt="嫡长女她又美又飒">
+		            						</a>
+		            	                </div>
+		            				</div>
+            					</li>
+            	   				<li data-rid="2">
+            	   					<div class="num-box">
+            	   						<span class="num2">2</span>
+            	   					</div>
+            	   					<div class="name-box">
+            	   						<a class="name middle" href="#" target="_blank" title="成亲后王爷暴富了">成亲后王爷暴富了</a>
+            	   						<i class="num">1098</i>
+            	   					</div>
+            	   				</li>
+            	   				<li data-rid="3">
+            	   					<div class="num-box">
+            	   						<span class="num3">3</span>
+            	   					</div>
+            	   					<div class="name-box">
+            	   						<a class="name middle" href="#" target="_blank"  title="傍上金主后我爆红了">傍上金主后我爆红了</a>
+            	   						<i class="num">809</i>
+            	   					</div></li>
+            	   					<li data-rid="4">
+            	   						<div class="num-box">
+            	   							<span class="num4">4</span>
+            	   						</div>
+            	   						<div class="name-box">
+            	   							<a class="name middle" href="#" target="_blank"  title="致命偏宠">致命偏宠</a>
+            	   							<i class="num">737</i>
+            	   						</div>
+            	   					</li>
+            	   					<li data-rid="5">
+            	   						<div class="num-box">
+            	   							<span class="num5">5</span>
+            	   						</div>
+            	   						<div class="name-box">
+            	   							<a class="name middle" href="#" target="_blank" title="我有五个大佬爸爸">我有五个大佬爸爸</a>
+            	   							<i class="num">330</i>
+            	   						</div>
+            	   					</li>
+            	   					<li data-rid="6">
+            	   						<div class="num-box">
+            	   							<span class="num6">6</span>
+            	   						</div>
+            	   						<div class="name-box">
+            	   							<a class="name middle" href="#" target="_blank" title="快穿之安心做个路人甲">快穿之安心做个路人甲</a>
+            	   							<i class="num">219</i>
+            	   						</div>
+            	   					</li>
+            	   					<li data-rid="7">
+            	   						<div class="num-box">
+            	   							<span class="num7">7</span>
+            	   						</div><div class="name-box">
+            	   							<a class="name middle" href="#" target="_blank" title="太子爷的鬼迷心窍">太子爷的鬼迷心窍</a>
+            	   							<i class="num">207</i>
+            	   						</div>
+            	   					</li>
+            	   					<li data-rid="8">
+            	   						<div class="num-box">
+            	   							<span class="num8">8</span>
+            	   						</div>
+            	   						<div class="name-box">
+            	   							<a class="name middle" href="#" target="_blank"  title="离婚后影帝天天捡垃圾">离婚后影帝天天捡垃圾</a>
+            	   							<i class="num">196</i>
+            	   						</div>
+            	   					</li>
+            	   					<li data-rid="9">
+            	   						<div class="num-box">
+            	   							<span class="num9">9</span>
+            	   						</div>
+            	   						<div class="name-box">
+            	   							<a class="name middle" href="#" target="_blank" title="穿书后每天都在被迫撒娇">穿书后每天都在被迫撒娇</a>
+            	   							<i class="num">189</i>
+            	   						</div>
+            	   					</li>
+            	   					<li data-rid="10">
+            	   						<div class="num-box">
+            	   							<span class="num10">10</span>
+            	   						</div>
+            	   						<div class="name-box">
+            	   							<a class="name middle" href="#" target="_blank" title="反穿之全能小厨娘">反穿之全能小厨娘</a>
+            	   							<i class="num">140</i>
+            	   						</div>
+            	   					</li>
+            				</ul>
+            			</div>
+            		</div>
+            		<div class="rank-list width" >
+            			<h3 class="wrap-title lang">热销榜
+            				<a class="more" href="#" target="_blank">更多<em class="iconfont">&gt;</em>
+            			</a>
+            			</h3>
+            			<div class="book-list">
+            				<ul>
+            					<li class="unfold" data-rid="1">
+            						<div class="book-wrap cf">
+            							<div class="book-info fl">
+            								<h3>NO.1</h3>
+            								<h4>
+            									<a href="#" target="_blank"  title="致命偏宠">致命偏宠</a>
+            								</h4>
+            								<p class="imop">销量冠军</p>
+            								<p class="author">
+            									<a class="type" href="#" target="_blank">现代言情</a><i>·</i>
+            									<a class="writer default">漫西</a>
+            								</p>
+            							</div>
+            							<div class="book-cover">
+            								<a class="link" href="#" target="_blank">
+            									<img src="//bookcover.yuewen.com/qdbimg/349573/c_17755279506421504/90" alt="致命偏宠">
+            								</a>
+            								<span></span>
+            							</div>
+            						</div>
+            					</li>
+            					<li data-rid="2">
+            						<div class="num-box">
+            							<span class="num2">2</span>
+            						</div>
+            						<div class="name-box">
+            							<a class="name long" href="#" target="_blank" title="别闹，薄先生！">别闹，薄先生！</a>
+            							<i class="trend">
+            								<em class="iconfont">--</em>
+            							</i>
+            						</div>
+            					</li>
+            					<li data-rid="3">
+            						<div class="num-box">
+            							<span class="num3">3</span>
+            						</div>
+            						<div class="name-box">
+            							<a class="name long" href="#" target="_blank" title="夫人每天都在线打脸">夫人每天都在线打脸</a>
+            							<i class="trend">
+            								<em class="iconfont">--</em>
+            							</i>
+            						</div>
+            					</li>
+            					<li data-rid="4">
+            						<div class="num-box">
+            							<span class="num4">4</span>
+            						</div>
+            						<div class="name-box">
+            							<a class="name long" href="#" target="_blank"  title="成亲后王爷暴富了">成亲后王爷暴富了</a>
+            							<i class="trend">
+            								<em class="iconfont">--</em>
+            							</i>
+            						</div>
+            					</li>
+            					<li data-rid="5">
+            						<div class="num-box">
+            							<span class="num5">5</span>
+            						</div>
+            						<div class="name-box">
+            							<a class="name long" href="#" target="_blank"  title="全能大佬又被拆马甲了">全能大佬又被拆马甲了</a>
+            							<i class="trend"><em class="iconfont">--</em></i>
+            						</div>
+            					</li>
+            					<li data-rid="6">
+            						<div class="num-box">
+            							<span class="num6">6</span>
+            						</div>
+            						<div class="name-box">
+            							<a class="name long" href="#" target="_blank" title="不好好搞科研就要继承亿万家产">不好好搞科研就要继承亿万家产</a>
+            							<i class="trend"><em class="iconfont">--</em></i>
+            						</div>
+            					</li>
+            					<li data-rid="7">
+            						<div class="num-box">
+            							<span class="num7">7</span>
+            						</div>
+            						<div class="name-box">
+            							<a class="name long" href="#" target="_blank"  title="重生后我成了权臣的掌中娇">重生后我成了权臣的掌中娇</a>
+            							<i class="trend"><em class="iconfont">--</em></i>
+            						</div>
+            					</li>
+            					<li data-rid="8">
+            						<div class="num-box">
+            							<span class="num8">8</span>
+            						</div>
+            						<div class="name-box">
+            							<a class="name long" href="#" target="_blank"  title="嫡长女她又美又飒">嫡长女她又美又飒</a>
+            							<i class="trend"><em class="iconfont">--</em></i>
+            						</div>
+            					</li>
+            					<li data-rid="9">
+            						<div class="num-box"><span class="num9">9</span></div>
+            						<div class="name-box">
+            							<a class="name long" href="#" target="_blank"  title="太子爷的鬼迷心窍">太子爷的鬼迷心窍</a>
+            							<i class="trend"><em class="iconfont">--</em></i>
+            						</div>
+            					</li>
+            					<li data-rid="10">
+            						<div class="num-box"><span class="num10">10</span></div>
+            						<div class="name-box"><a class="name long" href="#" target="_blank" title="他的掌中妻">他的掌中妻</a>
+            							<i class="trend"><em class="iconfont">--</em></i>
+            						</div>
+            					</li>
+            				</ul>
+            			</div>
+            		</div>
+            		<div class="rank-list" >
+            			<h3 class="wrap-title lang">礼物榜<a class="more" href="/rank/reward" target="_blank">更多<em class="iconfont">&gt;</em>
+            			</a>
+            			</h3>
+            			<div class="book-list">
+            				<ul>
+            					<li class="unfold" data-rid="1">
+            				       <div class="book-wrap cf">
+            				       	<div class="book-info fl">
+            				       		<h3>NO.1</h3>
+            				       		<h4>
+            				       			<a href="#" target="_blank"  title="做长公主那些年">做长公主那些年</a>
+            				       		</h4>
+            				       		<p class="imop">读者最爱</p><p class="author">
+            				       			<a class="type" href="#" target="_blank">古代言情</a><i>·</i><a class="writer default">漠家初九</a>
+            				       		</p>
+            				       	</div>
+            				       	<div class="book-cover">
+            				       		<a class="link" href="#" target="_blank">
+            				       			<img src="//bookcover.yuewen.com/qdbimg/349573/c_16566797004160804/90" alt="做长公主那些年">
+            				       		</a>
+            				       	</div>
+            				       </div>
+            					</li>
+            					<li data-rid="2">
+            						<div class="num-box">
+            							<span class="num2">2</span>
+            						</div>
+            						<div class="name-box">
+            							<a class="name long" href="#" target="_blank"  title="致命偏宠">致命偏宠</a>
+            							<i class="trend"><em class="iconfont">--</em></i>
+            						</div>
+            					</li>
+            					<li data-rid="3">
+            						<div class="num-box">
+            							<span class="num3">3</span>
+            						</div>
+            						<div class="name-box">
+            							<a class="name long" href="#" target="_blank"  title="大恩以婚为报">大恩以婚为报</a>
+            							<i class="trend"><em class="iconfont">--</em></i>
+            						</div>
+            					</li>
+            					<li data-rid="4">
+            						<div class="num-box"><span class="num4">4</span></div>
+            						<div class="name-box"><a class="name long" href="#" target="_blank" title="团宠反派被病娇缠上了">团宠反派被病娇缠上了</a>
+            							<i class="trend"><em class="iconfont">--</em></i>
+            						</div>
+            					</li>
+            					<li data-rid="5"><div class="num-box"><span class="num5">5</span></div>
+            					<div class="name-box">
+            						<a class="name long" href="#" target="_blank" title="夫人每天都在线打脸">夫人每天都在线打脸</a>
+            						<i class="trend"><em class="iconfont">--</em></i></div>
+            					</li>
+            					<li data-rid="6">
+            						<div class="num-box"><span class="num6">6</span></div>
+            						<div class="name-box"><a class="name long" href="#" target="_blank" title="夜寒深深醉思量">夜寒深深醉思量</a>
+            							<i class="trend"><em class="iconfont">--</em></i>
+            						</div>
+            					</li>
+            					<li data-rid="7">
+            						<div class="num-box"><span class="num7">7</span></div>
+            						<div class="name-box"><a class="name long" href="#" target="_blank"  title="被六个大佬宠野后我飘了">被六个大佬宠野后我飘了</a>
+            							<i class="trend"><em class="iconfont">--</em></i></div>
+            					</li>
+            					<li data-rid="8">
+            						<div class="num-box"><span class="num8">8</span></div>
+            						<div class="name-box"><a class="name long" href="#" target="_blank" title="魂归后宿敌总想跟我谈恋爱">魂归后宿敌总想跟我谈恋爱</a>
+            							<i class="trend"><em class="iconfont">--</em></i></div>
+            					</li>
+       							<li data-rid="9">
+       								<div class="num-box"><span class="num9">9</span></div>
+       								<div class="name-box"><a class="name long" href="#" target="_blank" title="顶流作者不好惹">顶流作者不好惹</a>
+       									<i class="trend"><em class="iconfont">--</em></i>
+       								</div>
+       							</li>
+       							<li data-rid="10">
+       								<div class="num-box"><span class="num10">10</span></div>
+       								<div class="name-box"><a class="name long" href="#" target="_blank" title="学神他又在耽误我考第一">学神他又在耽误我考第一</a>
+       									<i class="trend"><em class="iconfont">--</em></i>
+       								</div>
+       							</li>
+            				</ul>
+            			</div>
+            		</div>
+            		<div class="rank-list">
+            			<h3 class="wrap-title lang">更新榜<a class="more" href="#" target="_blank">更多<em class="iconfont">&gt;</em></a></h3>
+            			<div class="book-list">
+            				<ul>
+            					<li class="unfold" data-rid="1">
+            						<div class="book-wrap cf">
+            							<div class="book-info fl"><h3>NO.1</h3>
+            								<h4>
+            									<a href="#" target="_blank" title="关先生的苏小姐">关先生的苏小姐</a>
+            								</h4>
+            								<p class="imop">勤更明星</p>
+            								<p class="author">
+            									<a class="type" href="#" target="_blank">现代言情</a><i>·</i><a class="writer default">夏沫非墨</a>
+            								</p>
+            							</div>
+            							<div class="book-cover">
+            								<a class="link" href="#" target="_blank" >
+            									<img src="//bookcover.yuewen.com/qdbimg/349573/c_14527497304064904/90" alt="关先生的苏小姐"></a>
+            									<span></span>
+            							</div>
+            						</div>
+            					</li>
+            					<li data-rid="2">
+            						<div class="num-box"><span class="num2">2</span></div>
+            						<div class="name-box"><a class="name" href="#" target="_blank" title="逆袭之公主不好当">逆袭之公主不好当</a>
+            							<i class="author">鹄轶</i></div>
+            					</li>
+            					<li data-rid="3">
+            						<div class="num-box"><span class="num3">3</span></div>
+            						<div class="name-box"><a class="name" href="#" target="_blank" title="别动权臣的小夫人">别动权臣的小夫人</a>
+            							<i class="author">风花雪玉</i>
+            						</div>
+            					</li>
+            					<li data-rid="4">
+            						<div class="num-box"><span class="num4">4</span></div>
+            						<div class="name-box"><a class="name" href="#" target="_blank" title="我的世界圈你入怀">我的世界圈你入怀</a>
+            							<i class="author">海参刺儿</i></div>
+            					</li>
+            					<li data-rid="5">
+            						<div class="num-box"><span class="num5">5</span></div>
+            						<div class="name-box"><a class="name" href="#" target="_blank" title="被六个大佬宠野后我飘了">被六个大佬宠野后我飘了</a>
+            							<i class="author">灵婉兮</i>
+            						</div>
+            					</li>
+            					<li data-rid="6">
+            						<div class="num-box"><span class="num6">6</span></div>
+            						<div class="name-box"><a class="name" href="#" target="_blank" title="俏农妃">俏农妃</a>
+            							<i class="author">芜涵</i>
+            						
+            						</div>
+            					</li>
+            					<li data-rid="7">
+            						<div class="num-box"><span class="num7">7</span></div>
+            						<div class="name-box"><a class="name" href="#" target="_blank" title="身边个个都是反派大佬">身边个个都是反派大佬</a>
+            							<i class="author">樎骨</i>
+            						</div>
+            					</li>
+            					<li data-rid="8">
+            						<div class="num-box"><span class="num8">8</span></div>
+            						<div class="name-box"><a class="name" href="#" target="_blank" title="神医女帝">神医女帝</a>
+            							<i class="author">静夜无言</i>
+            						</div>
+            					</li>
+            					<li data-rid="9">
+            						<div class="num-box"><span class="num9">9</span></div>
+            						<div class="name-box"><a class="name" href="#" target="_blank" title="昭瑶而过">昭瑶而过</a>
+            							<i class="author">花知悔</i>
+            						</div>
+            					</li>
+            					<li data-rid="10">
+            						<div class="num-box"><span class="num10">10</span></div>
+            						<div class="name-box"><a class="name" href="#" target="_blank" title="原来学神暗恋我">原来学神暗恋我</a>
+            							<i class="author">三一零白月光</i>
+            						</div>
+            					</li>
+            				</ul>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+            <div class="banner-wrap mb20">
+            	<a href="#" target="_blank">
+            		<img src="//bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/63804d594d16e7d4ebdf2b6578341942.jpg">
+            		<span class="op-tag">
+            		</span>
+            	</a>
+            </div>
+            
+            <div class="free-book-wrap mb20" id="j-freeBookWrap">
+            	<div id="time-box" class="time-box fl" data-endtime="1605455999">
+            		<div class="limit-wrap">
+            			<h3 class="lang">限时免费</h3>
+            			<p class="type">VIP章节免费读</p>
+            			<div class="icon-time"></div>
+            			<p class="count" id="count">
+            			</p>
+
+            			<a class="blue" href="/free" target="_blank">进入限免频道<span>&gt;</span></a>
+            		</div>
+            	</div>
+            	<ul class="fl">
+            		<li data-rid="1">
+            			<div class="book-img">
+            				<a href="#" target="_blank">
+            					<img src="//bookcover.yuewen.com/qdbimg/349573/c_18079463908608404/90" alt="被陆先生宠成小祖宗"></a>
+            			</div>
+            			<a class="name" href="#" target="_blank">被陆先生宠成小祖宗</a><s>5红袖币⁄千字</s>
+            			<a class="light-border-btn" href="#" target="_blank">免费阅读</a></li>
+            			<li data-rid="2">
+            				<div class="book-img">
+            					<a href="#" target="_blank">
+            						<img src="//bookcover.yuewen.com/qdbimg/349573/c_17521479506741504/90" alt="穿成病弱反派的心肝"></a>
+            				</div>
+            				<a class="name" href="#" target="_blank">穿成病弱反派的心肝</a>
+            				<s>5红袖币⁄千字</s><a class="light-border-btn" href="#" target="_blank">免费阅读</a>
+            			</li>
+            			<li data-rid="3">
+            				<div class="book-img">
+            					<a href="#" target="_blank"><img src="//bookcover.yuewen.com/qdbimg/349573/c_18081233101318604/90" alt="我开的海鲜馆它实火了"></a>
+            				</div>
+            				<a class="name" href="#" target="_blank">我开的海鲜馆它实火了</a>
+            				<s>5红袖币⁄千字</s>
+            				<a class="light-border-btn" href="#" target="_blank">免费阅读</a>
+            			</li>
+            			<li data-rid="4">
+            				<div class="book-img">
+            					<a href="#" target="_blank"><img src="//bookcover.yuewen.com/qdbimg/349573/c_18027614001145804/90" alt="大恩以婚为报"></a>
+            				</div>
+            				<a class="name" href="#" target="_blank">大恩以婚为报</a>
+            				<s>5红袖币⁄千字</s>
+            				<a class="light-border-btn" href="#" target="_blank">免费阅读</a>
+            			</li>
+            	</ul>
+            </div>
+            
+            <div class="banner-wrap mb20"><a href="#" target="_blank">
+            	<img src="//qidian.gtimg.com/hongxiu/images/index/report.ca1c9.jpg"></a></div>
+        </div>
+                      <div class="footer">
+	            <div class="box-center cf">
+		            <div class="footer-menu dib-wrap">
+			            <a href="#" target="_blank" >关于我们</a>
+			            <a href="#" target="_blank" rel="nofollow">联系我们</a>
+			            <a href="#" target="_blank" rel="nofollow">帮助中心</a>
+			            <a href="#" target="_blank" rel="nofollow">客服中心</a>
+			            <a href="#" target="_blank">加入我们</a>
+			            <a href="#" target="_blank" rel="nofollow">举报中心</a>
+		            </div>
+		            <div class="copy-right">
+		            <p><span>Copyright © 1999-2020 www.shuhai.com All Rights Reserved</span>
+		           		 版权所有 书海科技发展有限公司</p>
+		           <p>书海科技发展有限公司 蒙ICP证208999号 <a href="#" target="_blank" rel="nofollow">蒙ICP证208999号-1</a>
+		            <a href="#" style="display: inline-block" target="_blank" rel="nofollow">
+		            <img src="//qidian.gtimg.com/hongxiu/images/beian.d0289.png" style="float: left">蒙公网安备 11010502030109号</a>蒙网文[2015]0006-006号新出网证（蒙）字204号</p>
+		            <p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！客服电话：010-59357051</p>
+		            <p>联系方式 总机 010-83050798-6900 地址：内蒙赤峰鑫源东路7号楼-2至8层101内北区7层706室</p>
+		            <p>本站所收录作品、社区话题、书库评论及本站所做之广告均属个人行为，与本站立场无关</p>
+		            </div>
+		            <div class="safety-box">
+			            <div class="safety-img dib-wrap">
+				            <a class="site1" href="http://www.12377.cn" target="_blank" rel="nofollow">
+				            </a>
+				            <a class="site2" href="http://www.shjbzx.cn" target="_blank" rel="nofollow">
+				            </a>
+				            <a class="site3" href="https://ss.knet.cn/verifyseal.dll?sn=e17103011010869321wsdl000000&amp;a=1&amp;pa=0.8369620393163408" target="_blank" rel="nofollow">
+				            </a>
+			            </div>
+		            </div>
+	            </div>
+            </div>
+  
+    </div>
+    </div>
+</body>
+</html>

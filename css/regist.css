@@ -1,0 +1,141 @@
+em{
+	font: bold;
+}
+* {  margin: 0; 
+     padding: 0;
+ }
+a{
+	text-decoration: none;
+	color: black;
+}
+.main{
+    width: 100%;
+    height: 750px;
+    background-color: #f6f6f6;
+    position: relative;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.main .registerbox{
+    width: 750px;
+    height: 484px;
+    background-color:#ffffff;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left:-375px;
+    margin-top:-242px;
+    background: url(../image/Desert.jpg) center no-repeat;
+    background-size: 700px 480px;
+       
+}
+.main .registerbox > h3{
+    margin-top:10px;
+    text-align: center;
+    font:24px/66px "楷体";
+    color: #fff;
+}
+.main .registerbox > form .email,
+.main .registerbox > form .password{
+    width: 370px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid rgba(216, 191, 216, 0.5);
+    margin: 13px auto;
+}
+ /*大框*/
+.main .registerbox > form .email:hover,
+.main .registerbox > form .password:hover{
+  border: 1px solid #FFF5F5;
+  background-color: rgba(255,120,255,0.3);
+}
+.main .registerbox > form .email > em,
+.main .registerbox > form .password > em
+{
+    display: inline-block;
+    width: 34px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 23px;
+    border-right: 1px solid #D9D9D9;
+    border-style: hidden;
+    background-color:  rgba(216, 191, 216, 0.6);
+    color:rgba(255, 255, 255, 0.7);
+}
+.main .registerbox > form .email:hover em,
+.main .registerbox > form .password:hover em{
+    background-color: rgba(216, 191, 216, 0.5) ;
+}
+/*输入框*/
+.main .registerbox > form  .email >input,
+.main .registerbox > form  .password >input{
+    width: 326px; 
+    height: 36px;
+    margin-left: -2px;
+    line-height: 36px;
+    font: 14px "宋体";
+    padding-left: 10px;
+    color: #999999;
+    border-style: hidden;
+    background-color: rgba(216, 191, 216, 0.5);
+}
+/*验证码*/
+.main .registerbox > form > .verification > input{
+    width: 200px;
+    height: 34px;
+    line-height: 34px;
+    font: 14px/1 "宋体";
+    margin: 13px 0 0 184px;
+    border-style: hidden;
+    color: gray;
+    background-color: rgba(216, 191, 216, 0.5);
+    padding-left: 10px;
+}
+.main .registerbox  form input:hover{
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+
+}
+.main .registerbox  form .verification input:hover{
+    border: 1px solid rgba(255, 255, 255, 0.7);
+   background-color: rgba(255,120,255,0.3);
+}
+.main .registerbox > form > .verification > img{
+    margin: 18px 0 0 7px;
+    height: 20px;
+}
+.main .registerbox > form > label{
+    display: inline-block;
+    margin-left: 184px;
+    padding-bottom: 10px; 
+    font:16px/1 "宋体";
+    color:#F9F2E9;
+}
+.main .registerbox > form > .verlabel{
+    padding-top:13px;
+}
+.main .registerbox > form > .registerbtn{
+    width: 386px;
+    height: 46px;
+    border-style: hidden;
+    background-color: rgba(216, 191, 216, 0.5);
+    color: #FFEBEE;
+    font:20px/46px "宋体";
+    cursor: pointer;
+    border-radius: 6px;
+    margin:22px 0 0 184px;
+}
+.main .registerbox > form > .hint{
+    text-align: center;
+    padding-top: 20px;
+    font:18px  "楷体" ;
+    color: #FFEBEE;
+}
+.main .registerbox > form > .hint > a{
+    color:#FF589D;
+}
